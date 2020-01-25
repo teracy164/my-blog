@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { HeaderComponent } from './header.component';
+import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
 @NgModule({
@@ -7,6 +8,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     HeaderComponent,
   ],
   imports: [
+    MatButtonModule,
     MatToolbarModule,
   ],
   exports: [

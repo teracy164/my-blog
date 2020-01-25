@@ -1,6 +1,6 @@
 <mat-toolbar>
-    <a routerLink="/">TOP</a>
+    <button mat-button (click)="navigate('/top')">TOP</button>
     <span class="spacer"></span>
-    <a routerLink="/blogs">Blogs</a>
-    <a routerLink="/about">About</a>
+    <button mat-button (click)="navigate('/blogs')">Blogs</button>
+    <button mat-button (click)="navigate('/about')">About</button>
 </mat-toolbar>
