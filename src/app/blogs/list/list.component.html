@@ -1,0 +1,9 @@
+<div class="blog-list">
+    <h1 class="title">ブログ一覧</h1>
+    <ul *ngIf="blogs">
+        <li *ngFor="let blog of blogs">
+            <span class="create-date">{{blog.created_at | date: 'yyyy/MM/dd'}}</span>
+            <a class="blog-title" routerLink="/blogs/{{blog.id}}">{{blog.title}}</a>
+        </li>
+    </ul>
+</div>
