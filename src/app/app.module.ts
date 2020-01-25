@@ -9,6 +9,7 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { HeaderModule } from './shared/header/header.module';
 import { TopModule } from './top/top.module';
+import { AboutModule } from './about/about.module';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { TopModule } from './top/top.module';
 
     HeaderModule,
     TopModule,
+    AboutModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
