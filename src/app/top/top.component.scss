@@ -1,0 +1,26 @@
+@import '../../styles-valiables.scss';
+
+img {
+    width: 100vw;
+}
+
+.blog-title{
+    h1 {
+        position: absolute;
+        color: white;
+    }
+}
+
+.contents {
+    display: inline-block;
+    width: 50%;
+}
+
+.top-contents {
+    padding: 10px;
+    height: 100%;
+
+    .title {
+        border-bottom: 1px solid;
+    }
+}
