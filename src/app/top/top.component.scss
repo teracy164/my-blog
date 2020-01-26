@@ -13,7 +13,16 @@ img {
 
 .contents {
     display: inline-block;
-    width: 50%;
+
+    &.news {
+        width: 40%;
+    }
+    &.qiita {
+        width: 40%;
+    }
+    &.twitter {
+        width: 20%;
+    }
 }
 
 .top-contents {
