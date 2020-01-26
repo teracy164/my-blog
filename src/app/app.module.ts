@@ -8,6 +8,7 @@ import { environment } from 'src/environments/environment';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireAnalyticsModule, ScreenTrackingService } from '@angular/fire/analytics';
 import { HeaderModule } from './shared/header/header.module';
 import { AboutModule } from './about/about.module';
 import { MarkdownModule } from 'ngx-markdown';
@@ -23,12 +24,15 @@ import { MarkdownModule } from 'ngx-markdown';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireStorageModule,
     AngularFirestoreModule,
+    AngularFireAnalyticsModule,
     MarkdownModule.forRoot(),
 
     HeaderModule,
     AboutModule,
   ],
-  providers: [],
+  providers: [
+    ScreenTrackingService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
