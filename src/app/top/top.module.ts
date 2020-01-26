@@ -5,6 +5,7 @@ import { TopTwitterComponent } from './twitter/twitter.component';
 import { QiitaModule } from 'src/services/qiita/qiita.module';
 import { TopQiitaComponent } from './qiita/qiita.component';
 import { CommonModule } from '@angular/common';
+import { TwitterModule } from 'src/services/twitter/twitter.module';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { CommonModule } from '@angular/common';
   imports: [
     CommonModule,
     QiitaModule,
+    TwitterModule,
   ],
 })
 export class TopModule { }
