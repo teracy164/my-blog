@@ -1,20 +1,27 @@
 import { Injectable } from '@angular/core';
 import { Blog } from 'src/types/blog.interface';
+import { AngularFirestore, QueryDocumentSnapshot, DocumentData } from '@angular/fire/firestore';
 
 @Injectable()
 export class BlogsService {
-  readonly testData: Blog[] = [
-    { id: 1, title: 'ブログ１', contents: 'ブログ１のコンテンツ', tags: ['タグ1'], created_at: '2020/01/01 00:00:00' },
-    { id: 2, title: 'ブログ２', contents: 'ブログ２のコンテンツ', tags: ['タグ2', 'タグ3'], created_at: '2020/01/02 00:00:00' },
-  ];
+  constructor(private firestore: AngularFirestore) { }
 
-  constructor() { }
-
-  async getBlogs() {
-    return this.testData;
+  async getBlogs(): Promise<Blog[]> {
+    const data = await this.firestore.collection<Blog>('blogs').get().toPromise();
+    return data.docs.map<Blog>(doc => this.toBlog(doc));
   }
 
-  async getBlog(id: number) {
-    return this.testData.find(data => data.id === id);
+  async getBlog(docId: string): Promise<Blog> {
+    if (docId) {
+      const doc = await this.firestore.collection<Blog>('blogs').doc(docId).get().toPromise();
+      return this.toBlog(doc);
+    } else {
+      return null
+    }
+  }
+
+  private toBlog(doc: QueryDocumentSnapshot<DocumentData>) {
+    // ドキュメントフィールドにIDがないため、ドキュメントIDを付与したデータに変換して返却
+    return Object.assign({ id: doc.id }, doc.data()) as Blog;
   }
 }

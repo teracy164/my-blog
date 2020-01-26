@@ -1,5 +1,5 @@
 export interface Blog {
-    id: number;
+    id: string;
     title: string;
     contents: string;
     tags: string[];

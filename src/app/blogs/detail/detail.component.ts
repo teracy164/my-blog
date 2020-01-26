@@ -16,7 +16,7 @@ export class BlogsDetailComponent implements OnInit {
   async ngOnInit() {
     const id = this.activatedRoute.snapshot.params.id;
     if (id) {
-      this.detail = await this.blogsService.getBlog(Number(id));
+      this.detail = await this.blogsService.getBlog(id);
     }
   }
 }
