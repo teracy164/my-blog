@@ -19,4 +19,8 @@ export class BlogsDetailComponent implements OnInit {
       this.detail = await this.blogsService.getBlog(id);
     }
   }
+
+  get contents() {
+    return this.detail.contents.replace(/(\\n|\<br>)/g, '\n');
+  }
 }

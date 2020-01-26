@@ -1,7 +1,6 @@
 .blog-detail {
-    text-align: center;
-
     .title-area {
+        text-align: center;
         margin: 20px 10px;
         border-bottom: 1px solid;
 
@@ -11,6 +10,14 @@
         .date {
             font-size: 12px;
             color: lightgray;
+        }
+    }
+
+    .contents-area {
+        padding: 10px 20px;
+
+        div {
+            max-width: 600px;
         }
     }
 }

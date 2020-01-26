@@ -3,5 +3,9 @@
         <h1>{{detail.title}}</h1>
         <span class="date">作成日：{{detail.created_at | date: 'yyyy/MM/dd HH:mm'}}</span>
     </div>
-    <span>{{detail.contents}}</span>
+    <div class="contents-area">
+        <div markdown ngPreserveWhitespaces>
+            {{contents}}
+        </div>
+    </div>
 </div>

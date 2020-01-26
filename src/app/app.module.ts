@@ -7,10 +7,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { environment } from 'src/environments/environment';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireStorageModule } from '@angular/fire/storage';
-import { AngularFirestoreModule  } from '@angular/fire/firestore';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { HeaderModule } from './shared/header/header.module';
 import { TopModule } from './top/top.module';
 import { AboutModule } from './about/about.module';
+import { MarkdownModule } from 'ngx-markdown';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { AboutModule } from './about/about.module';
     BrowserAnimationsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireStorageModule,
-    AngularFirestoreModule ,
+    AngularFirestoreModule,
+    MarkdownModule.forRoot(),
 
     HeaderModule,
     TopModule,

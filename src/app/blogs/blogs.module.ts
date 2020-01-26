@@ -5,6 +5,7 @@ import { BlogsService } from './blogs.service';
 import { BlogsListComponent } from './list/list.component';
 import { BlogsDetailComponent } from './detail/detail.component';
 
+import { MarkdownModule } from 'ngx-markdown';
 @NgModule({
   declarations: [
     BlogsListComponent,
@@ -13,6 +14,8 @@ import { BlogsDetailComponent } from './detail/detail.component';
   imports: [
     CommonModule,
     BlogsRoutingModule,
+    MarkdownModule.forChild(),
+
   ],
   providers: [
     BlogsService,
