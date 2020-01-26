@@ -1,7 +1,7 @@
 @import '../../styles-valiables.scss';
 
 img {
-    width: 100vw;
+    width: 100%;
 }
 
 .blog-title{
@@ -13,12 +13,13 @@ img {
 
 .contents {
     display: inline-block;
+    margin-bottom: auto;
 
     &.news {
-        width: 35%;
+        width: 70%;
     }
     &.qiita {
-        width: 35%;
+        width: 100%;
     }
     &.twitter {
         width: 30%;
@@ -27,7 +28,6 @@ img {
 
 .top-contents {
     padding: 10px;
-    height: 100%;
 
     .title {
         border-bottom: 1px solid;

@@ -9,7 +9,6 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { HeaderModule } from './shared/header/header.module';
-import { TopModule } from './top/top.module';
 import { AboutModule } from './about/about.module';
 import { MarkdownModule } from 'ngx-markdown';
 
@@ -27,7 +26,6 @@ import { MarkdownModule } from 'ngx-markdown';
     MarkdownModule.forRoot(),
 
     HeaderModule,
-    TopModule,
     AboutModule,
   ],
   providers: [],

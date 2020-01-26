@@ -6,6 +6,7 @@ import { QiitaModule } from 'src/services/qiita/qiita.module';
 import { TopQiitaComponent } from './qiita/qiita.component';
 import { CommonModule } from '@angular/common';
 import { TwitterModule } from 'src/services/twitter/twitter.module';
+import { TopRoutingModule } from './top-routing.module';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { TwitterModule } from 'src/services/twitter/twitter.module';
   ],
   imports: [
     CommonModule,
+    TopRoutingModule,
     QiitaModule,
     TwitterModule,
   ],

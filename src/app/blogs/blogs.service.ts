@@ -6,8 +6,11 @@ import { AngularFirestore, QueryDocumentSnapshot, DocumentData } from '@angular/
 export class BlogsService {
   constructor(private firestore: AngularFirestore) { }
 
-  async getBlogs(): Promise<Blog[]> {
-    const data = await this.firestore.collection<Blog>('blogs').get().toPromise();
+  async getBlogs(limit: number = 20): Promise<Blog[]> {
+    const data = await this.firestore
+      .collection<Blog>('blogs', ref => ref.orderBy('created_at', 'desc').limit(limit))
+      .get()
+      .toPromise();
     return data.docs.map<Blog>(doc => this.toBlog(doc));
   }
 
