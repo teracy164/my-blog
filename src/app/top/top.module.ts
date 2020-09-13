@@ -7,6 +7,7 @@ import { TopQiitaComponent } from './qiita/qiita.component';
 import { CommonModule } from '@angular/common';
 import { TwitterModule } from 'src/services/twitter/twitter.module';
 import { TopRoutingModule } from './top-routing.module';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { TopRoutingModule } from './top-routing.module';
     TopRoutingModule,
     QiitaModule,
     TwitterModule,
+    FlexLayoutModule,
   ],
 })
 export class TopModule { }

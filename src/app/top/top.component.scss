@@ -14,16 +14,6 @@ img {
 .contents {
     display: inline-block;
     margin-bottom: auto;
-
-    &.news {
-        width: 70%;
-    }
-    &.qiita {
-        width: 100%;
-    }
-    &.twitter {
-        width: 30%;
-    }
 }
 
 .top-contents {
