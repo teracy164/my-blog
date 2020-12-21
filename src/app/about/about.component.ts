@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
     selector: 'app-about',
     templateUrl: './about.component.html',
     styleUrls: ['./about.component.scss'],
 })
-export class AboutComponent {
+export class AboutComponent implements AfterViewInit {
     public skills = [
         { category: 'language', name: 'typescript', level: '◎' },
         { category: 'language', name: 'javascript', level: '◎' },
@@ -37,4 +37,11 @@ export class AboutComponent {
         { category: 'API', name: 'OpenAPI', level: '○' },
         { category: 'API', name: 'MS GraphAPI', level: '○' },
     ];
+
+    @ViewChild('twitter') twitter: ElementRef;
+
+    ngAfterViewInit() {
+        // Twitterボタンを有効にするため、ウィジェットをロード
+        (window as any).twttr.widgets.load();
+    }
 }

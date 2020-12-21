@@ -1,9 +1,14 @@
 <div class="blog-list">
-    <h1 class="title">ブログ一覧</h1>
-    <ul *ngIf="blogs">
-        <li *ngFor="let blog of blogs">
-            <span class="create-date">{{ blog.created_at | date: 'yyyy/MM/dd' }}</span>
-            <a class="blog-title" routerLink="/blogs/{{ blog.id }}">{{ blog.title }}</a>
-        </li>
-    </ul>
+    <div class="list">
+        <ul *ngIf="blogs">
+            <li *ngFor="let blog of blogs; let index = i">
+                <p class="create-date">{{ blog.created_at | date: 'yyyy/MM/dd' }}</p>
+                <!-- <a class="blog-title" routerLink="/blogs/{{ blog.id }}">{{ blog.title }}</a> -->
+                <a class="blog-title" routerLink="/blogs" [queryParams]="{ id: blog.id }" (click)="onClickBlog(index)">{{ blog.title }}</a>
+            </li>
+        </ul>
+    </div>
+    <div class="detail">
+        <app-blogs-detail *ngIf="selectedBlog" [blog]="selectedBlog"></app-blogs-detail>
+    </div>
 </div>

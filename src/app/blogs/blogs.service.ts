@@ -4,7 +4,19 @@ import { AngularFirestore, QueryDocumentSnapshot, DocumentData } from '@angular/
 
 @Injectable()
 export class BlogsService {
+    blogs: Blog[];
+
     constructor(private firestore: AngularFirestore) {}
+
+    async init() {
+        this.blogs = await this.getBlogs();
+
+        return true;
+    }
+
+    findBlog(blogId: string) {
+        return this.blogs?.find((b) => b.id === blogId);
+    }
 
     async getBlogs(limit: number = 20): Promise<Blog[]> {
         const data = await this.firestore

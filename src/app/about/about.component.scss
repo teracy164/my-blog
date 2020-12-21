@@ -7,10 +7,18 @@
 
         .sns-item {
             padding: 10px;
+            // width: 30px;
+            height: 30px;
 
-            .twitter {
+            img {
+                // max-width: 100%;
+                max-height: 100%;
             }
+
             .qiita {
+                img {
+                    height: 50px;
+                }
             }
         }
     }
