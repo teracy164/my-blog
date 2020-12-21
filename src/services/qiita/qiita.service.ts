@@ -10,7 +10,7 @@ export class QiitaService {
     constructor(private http: HttpClient) {}
 
     private get<T>(path: string) {
-        return this.http.get<T>(this.apiHost + path).toPromise();    
+        return this.http.get<T>(this.apiHost + path).toPromise();
     }
 
     /**

@@ -1,17 +1,18 @@
-@import "../../../styles-valiables.scss";
+@import '../../../styles-valiables.scss';
 
 mat-toolbar {
-  height: $header-height;
-  background-color: rgba(0, 0, 0, 0);
+    height: $header-height;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 10000;
 
-  .spacer {
-    flex: 1 1 auto;
-  }
+    .spacer {
+        flex: 1 1 auto;
+    }
 
-  a {
-    padding: 5px;
-    margin: 10px;
-  }
-  
+    a {
+        padding: 5px;
+        margin: 10px;
+    }
 }
-

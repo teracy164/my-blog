@@ -1,7 +1,7 @@
 <div class="top-contents">
-  <h4 class="title">Qiita</h4>
-  <div *ngFor="let item of news" class="item">
-    <span class="date">{{item.created_at | date: 'yyyy/MM/dd'}}</span>
-    <a target="_blank" [href]="item.url" class="item-title" [title]="item.title">{{item.title}}</a>
-  </div>
+    <h4 class="title">Qiita</h4>
+    <div *ngFor="let item of news" class="item">
+        <span class="date">{{ item.created_at | date: 'yyyy/MM/dd' }}</span>
+        <a target="_blank" [href]="item.url" class="item-title" [title]="item.title">{{ item.title }}</a>
+    </div>
 </div>

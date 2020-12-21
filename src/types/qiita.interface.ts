@@ -17,7 +17,7 @@ export interface QiitaItem {
     likes_count: number;
     private: boolean;
     reactions_count: number;
-    tags: { name: string, version: string[] }[];
+    tags: { name: string; version: string[] }[];
     title: string;
     updated_at: string;
     url: string;

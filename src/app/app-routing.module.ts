@@ -3,14 +3,14 @@ import { Routes, RouterModule } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 
 const routes: Routes = [
-  { path: '', loadChildren: () => import('./top/top.module').then(m => m.TopModule) },
-  { path: 'about', component: AboutComponent },
-  { path: 'blogs', loadChildren: () => import('./blogs/blogs.module').then(m => m.BlogsModule) },
-  { path: '**', redirectTo: '' },
+    { path: '', loadChildren: () => import('./top/top.module').then((m) => m.TopModule) },
+    { path: 'about', component: AboutComponent },
+    { path: 'blogs', loadChildren: () => import('./blogs/blogs.module').then((m) => m.BlogsModule) },
+    { path: '**', redirectTo: '' },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

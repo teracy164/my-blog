@@ -10,18 +10,7 @@ import { TopRoutingModule } from './top-routing.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
-  declarations: [
-    TopComponent,
-    TopNewsComponent,
-    TopTwitterComponent,
-    TopQiitaComponent,
-  ],
-  imports: [
-    CommonModule,
-    TopRoutingModule,
-    QiitaModule,
-    TwitterModule,
-    FlexLayoutModule,
-  ],
+    declarations: [TopComponent, TopNewsComponent, TopTwitterComponent, TopQiitaComponent],
+    imports: [CommonModule, TopRoutingModule, QiitaModule, TwitterModule, FlexLayoutModule],
 })
-export class TopModule { }
+export class TopModule {}

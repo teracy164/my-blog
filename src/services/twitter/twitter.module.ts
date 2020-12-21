@@ -4,4 +4,4 @@ import { TwitterService } from './twitter.service';
 @NgModule({
     providers: [TwitterService],
 })
-export class TwitterModule { }
+export class TwitterModule {}

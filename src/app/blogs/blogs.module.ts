@@ -7,18 +7,8 @@ import { BlogsDetailComponent } from './detail/detail.component';
 
 import { MarkdownModule } from 'ngx-markdown';
 @NgModule({
-  declarations: [
-    BlogsListComponent,
-    BlogsDetailComponent,
-  ],
-  imports: [
-    CommonModule,
-    BlogsRoutingModule,
-    MarkdownModule.forChild(),
-
-  ],
-  providers: [
-    BlogsService,
-  ]
+    declarations: [BlogsListComponent, BlogsDetailComponent],
+    imports: [CommonModule, BlogsRoutingModule, MarkdownModule.forChild()],
+    providers: [BlogsService],
 })
-export class BlogsModule { }
+export class BlogsModule {}

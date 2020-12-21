@@ -1,11 +1,11 @@
 <div *ngIf="detail" class="blog-detail">
     <div class="title-area">
-        <h1>{{detail.title}}</h1>
-        <span class="date">作成日：{{detail.created_at | date: 'yyyy/MM/dd HH:mm'}}</span>
+        <h1>{{ detail.title }}</h1>
+        <span class="date">作成日：{{ detail.created_at | date: 'yyyy/MM/dd HH:mm' }}</span>
     </div>
     <div class="contents-area">
         <div markdown ngPreserveWhitespaces>
-            {{contents}}
+            {{ contents }}
         </div>
     </div>
 </div>

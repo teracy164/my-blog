@@ -1,10 +1,33 @@
-.about-page{
+.about-page {
     text-align: center;
 
-    .twitter-area {
+    .sns-links {
+        display: flex;
+        justify-content: center;
 
+        .sns-item {
+            padding: 10px;
+
+            .twitter {
+            }
+            .qiita {
+            }
+        }
     }
-    .qiita-area {
-        
+
+    .tab-item {
+        padding: 20px;
+
+        &.career {
+            max-width: 95%;
+
+            table {
+                margin: auto;
+                td {
+                    text-align: left;
+                    padding: 5px 10px;
+                }
+            }
+        }
     }
 }

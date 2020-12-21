@@ -1,12 +1,97 @@
 <div class="about-page">
     <h1>てらしーとは</h1>
 
-    この辺に説明とか経歴を出す
+    <div class="sns-links">
+        <div class="sns-item twitter">
+            <!-- <a target="_blank" href="https://twitter.com/teracy55">Twitter</a> -->
+            <a href="https://twitter.com/teracy55?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @teracy55</a>
+        </div>
+        <div class="sns-item qiita">
+            <a target="_blank" href="https://qiita.com/teracy55">Qiita</a>
+        </div>
+    </div>
+    ※連絡を取りたい場合はTwitterのDMにてお願いします※
 
-    <div class="twitter-area">
-        <a target="_blank" href="https://twitter.com/teracy55">Twitter</a>
-    </div>
-    <div class="qiita-area">
-        <a target="_blank" href="https://qiita.com/teracy55">Qiita</a>
-    </div>
+    <mat-tab-group>
+        <mat-tab label="経歴">
+            <div class="tab-item career">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>時期</th>
+                            <th>内容</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2018年11月〜</td>
+                            <td>自社勤怠システム構築</td>
+                        </tr>
+                        <tr>
+                            <td>2018年07月〜</td>
+                            <td>自社ECサイト構築（途中でポシャる）<br />合間にMonacaやCocosCreatorでモバイルアプリ開発</td>
+                        </tr>
+                        <tr>
+                            <td>2017年04月〜</td>
+                            <td>ゲームプラットフォーム多言語化対応</td>
+                        </tr>
+                        <tr>
+                            <td>2016年04月〜</td>
+                            <td>生保系Webシステム開発</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">〜〜Web業界に異動〜〜</td>
+                        </tr>
+                        <tr>
+                            <td>2013年04月〜</td>
+                            <td>ナビ開発</td>
+                        </tr>
+                        <tr>
+                            <td>2012年04月〜</td>
+                            <td>車載メーター開発</td>
+                        </tr>
+                        <tr>
+                            <td>2011年10月〜</td>
+                            <td>車載機器とBT連携するAndroidアプリの開発</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">〜〜組込み業界に異動〜〜</td>
+                        </tr>
+                        <tr>
+                            <td>2011年09月</td>
+                            <td>帳票出力システムの帳票追加対応（Java＋ApachPOI）</td>
+                        </tr>
+                        <tr>
+                            <td>2011年04月〜08月</td>
+                            <td>Java／Android研修</td>
+                        </tr>
+                        <tr>
+                            <td>2011年04月</td>
+                            <td>社会人デビュー</td>
+                        </tr>
+                        <tr>
+                            <td>2011年</td>
+                            <td>芝浦工業大学情報工学科卒</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </mat-tab>
+        <mat-tab label="スキル">
+            <div class="tab-item skills">
+                <div style="display: flex">
+                    <div style="flex-basis: 150px">カテゴリ</div>
+                    <div style="flex-basis: auto">熟練度</div>
+                    <div style="flex-basis: 200px">スキル</div>
+                    <div>備考</div>
+                </div>
+                <div *ngFor="let skill of skills" style="display: flex">
+                    <div style="flex-basis: 150px">{{ skill.category }}</div>
+                    <div style="flex-basis: auto">{{ skill.level }}</div>
+                    <div style="flex-basis: 200px">{{ skill.name }}</div>
+                    <div>{{ skill.note }}</div>
+                </div>
+            </div>
+        </mat-tab>
+    </mat-tab-group>
 </div>

@@ -4,15 +4,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
 @NgModule({
-  declarations: [
-    HeaderComponent,
-  ],
-  imports: [
-    MatButtonModule,
-    MatToolbarModule,
-  ],
-  exports: [
-    HeaderComponent,
-  ]
+    declarations: [HeaderComponent],
+    imports: [MatButtonModule, MatToolbarModule],
+    exports: [HeaderComponent],
 })
-export class HeaderModule { }
+export class HeaderModule {}

@@ -14,25 +14,21 @@ import { AboutModule } from './about/about.module';
 import { MarkdownModule } from 'ngx-markdown';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFireStorageModule,
-    AngularFirestoreModule,
-    AngularFireAnalyticsModule,
-    MarkdownModule.forRoot(),
+    declarations: [AppComponent],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        AngularFireModule.initializeApp(environment.firebase),
+        AngularFireStorageModule,
+        AngularFirestoreModule,
+        AngularFireAnalyticsModule,
+        MarkdownModule.forRoot(),
 
-    HeaderModule,
-    AboutModule,
-  ],
-  providers: [
-    ScreenTrackingService
-  ],
-  bootstrap: [AppComponent]
+        HeaderModule,
+        AboutModule,
+    ],
+    providers: [ScreenTrackingService],
+    bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

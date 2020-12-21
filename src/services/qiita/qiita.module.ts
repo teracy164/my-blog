@@ -6,4 +6,4 @@ import { QiitaService } from './qiita.service';
     imports: [HttpClientModule],
     providers: [QiitaService],
 })
-export class QiitaModule { }
+export class QiitaModule {}

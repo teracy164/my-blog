@@ -1,18 +1,18 @@
 .blog-list {
     text-align: center;
 
-  ul {
-      padding: 0;
-      
-    li {
-      list-style: none;
+    ul {
+        padding: 0;
 
-      .create-date {
-        margin: 0px 10px;
-      }
-      .blog-title {
-        margin: 0px 10px;
-      }
+        li {
+            list-style: none;
+
+            .create-date {
+                margin: 0px 10px;
+            }
+            .blog-title {
+                margin: 0px 10px;
+            }
+        }
     }
-  }
 }
