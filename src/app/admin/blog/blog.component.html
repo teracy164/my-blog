@@ -1,0 +1,14 @@
+<div style="display: flex">
+    <div>
+        <button (click)="onClickAdd()">新規追加</button>
+        <ul>
+            <li *ngFor="let blog of blogs; let i = index" (click)="onClickBlog(i)">{{ blog.title }}</li>
+        </ul>
+    </div>
+    <div *ngIf="selected" style="width: 100%; padding: 0 20px">
+        <div>
+            <button (click)="onClickEdit()">編集</button>
+        </div>
+        <markdown [data]="contents" ngPreserveWhitespaces></markdown>
+    </div>
+</div>

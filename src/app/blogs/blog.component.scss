@@ -1,0 +1,77 @@
+@import '../../styles-valiables.scss';
+
+$list-width: 300px;
+.blog-list {
+    text-align: center;
+    height: calc(100% - #{$header-height});
+
+    .list {
+        height: 100%;
+        max-width: $list-width;
+        border-right: 1px solid lightgray;
+        overflow-y: auto;
+        background-color: white;
+
+        ul {
+            padding: 0;
+
+            li {
+                list-style: none;
+                text-align: left;
+                font-size: 14px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                padding-bottom: 5px;
+
+                .create-date {
+                    font-size: 12px;
+                    color: lightgray;
+                    margin: 0px 10px;
+                }
+                .blog-title {
+                    margin: 0px 10px;
+                }
+            }
+        }
+    }
+    .detail {
+        overflow-y: auto;
+        width: 100%;
+    }
+}
+
+.mobile-menu {
+    text-align: left;
+    .menu-btn-wrapper {
+        max-width: $list-width;
+        background-color: white;
+        display: flex;
+
+        .title {
+            flex-basis: 100%;
+            text-align: center;
+        }
+        .menu-btn {
+            flex-basis: auto;
+            border: 0;
+            background-color: white;
+        }
+    }
+    .mobile-history {
+        display: none;
+        position: absolute;
+        height: calc(100% - #{$header-height});
+        width: 100vw;
+    }
+    &.show {
+        background-color: rgba(0, 0, 0, 0.5);
+        .mobile-history {
+            display: block;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .menu-btn-wrapper {
+            text-align: right;
+        }
+    }
+}

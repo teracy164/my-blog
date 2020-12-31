@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BlogsService } from 'src/app/blogs/blogs.service';
-import { Blog } from 'src/types/blog.interface';
+import { Blog } from 'src/types';
 
 @Component({
     selector: 'app-top-news',

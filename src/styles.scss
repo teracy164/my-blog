@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-
+@import './styles-valiables.scss';
 html,
 body {
     height: 100%;
@@ -7,4 +7,16 @@ body {
 body {
     margin: 0;
     font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+.page {
+    height: calc(100% - #{$header-height});
+}
+
+/* マークダウンプレビュー */
+.md-preview {
+    img {
+        max-width: 300px;
+        max-height: 300px;
+    }
 }

@@ -2,6 +2,6 @@
     <h4 class="title">News</h4>
     <div *ngFor="let item of news" class="item">
         <span class="date">{{ item.created_at | date: 'yyyy/MM/dd' }}</span>
-        <a class="item-title" routerLink="/blogs/{{ item.id }}" [title]="item.title">{{ item.title }}</a>
+        <a class="item-title" routerLink="/blogs" [queryParams]="{ id: item.id }" [title]="item.title">{{ item.title }}</a>
     </div>
 </div>

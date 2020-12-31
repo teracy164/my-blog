@@ -2,13 +2,15 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BlogsRoutingModule } from './blogs-routing.module';
 import { BlogsService } from './blogs.service';
-import { BlogsListComponent } from './list/list.component';
+import { BlogsComponent } from './blog.component';
 import { BlogsDetailComponent } from './detail/detail.component';
 
 import { MarkdownModule } from 'ngx-markdown';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatIconModule } from '@angular/material/icon';
 @NgModule({
-    declarations: [BlogsListComponent, BlogsDetailComponent],
-    imports: [CommonModule, BlogsRoutingModule, MarkdownModule.forRoot()],
+    declarations: [BlogsComponent, BlogsDetailComponent],
+    imports: [CommonModule, BlogsRoutingModule, MarkdownModule.forRoot(), FlexLayoutModule, MatIconModule],
     providers: [BlogsService],
 })
 export class BlogsModule {}

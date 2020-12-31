@@ -1,0 +1,47 @@
+<div [formGroup]="form" class="page" style="overflow-y: hidden">
+    <div style="padding: 10px">
+        <div class="btn-area">
+            <button mat-raised-button (click)="onClickCancel()">cancel</button>
+            <button mat-raised-button color="primary" (click)="onClickSave()">submit</button>
+        </div>
+        <mat-form-field class="example-full-width" class="title">
+            <mat-label>Blog Title</mat-label>
+            <input matInput formControlName="title" />
+        </mat-form-field>
+        <mat-form-field class="tags">
+            <mat-label>Tags</mat-label>
+            <mat-chip-list #chipList>
+                <mat-chip *ngFor="let tag of tags.controls; let i = index" [selectable]="true" [removable]="true" (removed)="onClickRemoveTag(i)"
+                    >{{ tag.value }}
+                    <mat-icon matChipRemove>cancel</mat-icon>
+                </mat-chip>
+            </mat-chip-list>
+            <input
+                #tag
+                placeholder="input tag name. when push enter key, add tag."
+                [matChipInputFor]="chipList"
+                [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                (matChipInputTokenEnd)="onClickAddTag(tag)"
+            />
+        </mat-form-field>
+    </div>
+    <div class="editor-ctrl">
+        <div class="file">
+            <button mat-icon-button (click)="inputFile.click()">
+                <mat-icon>insert_photo</mat-icon>
+            </button>
+            <input #inputFile type="file" (change)="onSelectImage($event)" />
+        </div>
+    </div>
+    <div #mdArea class="edit-area">
+        <div class="area editor">
+            <textarea #textarea formControlName="contents" placeholder="input area. support markdown"></textarea>
+        </div>
+        <div class="area preview">
+            <markdown [data]="contents" ngPreserveWhitespaces *ngIf="contents; else noInput"> </markdown>
+            <ng-template #noInput>
+                <span style="color: lightgray">preview</span>
+            </ng-template>
+        </div>
+    </div>
+</div>

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Blog } from 'src/types/blog.interface';
 import { AngularFirestore, QueryDocumentSnapshot, DocumentData } from '@angular/fire/firestore';
+import { Blog } from 'src/types';
 
 @Injectable()
 export class BlogsService {
