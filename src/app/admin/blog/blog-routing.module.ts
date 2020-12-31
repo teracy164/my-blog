@@ -1,12 +1,20 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AdminBlogComponent } from './blog.component';
-import { AdminBlogEditComponent } from './edit.component';
+import { AdminBlogListComponent } from './list/list.component';
+import { AdminBlogEditComponent } from './edit/edit.component';
 
 const routes: Routes = [
-    { path: '', component: AdminBlogComponent },
-    { path: 'add', component: AdminBlogEditComponent },
-    { path: 'edit/:id', component: AdminBlogEditComponent },
+    {
+        path: '',
+        component: AdminBlogComponent,
+        children: [
+            { path: 'list', component: AdminBlogListComponent },
+            { path: 'add', component: AdminBlogEditComponent },
+            { path: 'edit/:id', component: AdminBlogEditComponent },
+            { path: '**', redirectTo: 'list' },
+        ],
+    },
 ];
 
 @NgModule({

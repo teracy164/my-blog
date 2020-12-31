@@ -15,6 +15,7 @@ export class AdminBlogService {
 
     async init() {
         await this.blogService.init();
+        console.log(this.blogs);
     }
 
     findBlog(id: string) {
@@ -34,5 +35,9 @@ export class AdminBlogService {
     addImage(file: File) {
         const fileName = uuidv4();
         return this.fireStorage.upload('images/blogs/' + fileName, file);
+    }
+
+    getTags(): string[] {
+        return this.blogs?.reduce((arr, blog) => [...arr, ...blog.tags], []).filter((tag, i, self) => self.findIndex((item) => item === tag) === i);
     }
 }

@@ -1,24 +1,26 @@
 import { FormArray, FormControl, FormGroup } from '@angular/forms';
-import { AdminBlogService } from './blog.service';
-import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AdminBlogService } from '../shared/blog.service';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Blog } from 'src/types';
 import { COMMA, ENTER } from '@angular/cdk/keycodes';
+import { MatAutocompleteSelectedEvent } from '@angular/material/autocomplete';
 
 @Component({
     selector: 'app-admin-blog-edit',
     templateUrl: './edit.component.html',
     styleUrls: ['./edit.component.scss'],
 })
-export class AdminBlogEditComponent implements OnInit, AfterViewInit {
+export class AdminBlogEditComponent implements OnInit {
     id: string;
     form: FormGroup;
+    tags: string[] = [];
     readonly separatorKeysCodes: number[] = [ENTER, COMMA];
     @ViewChild('textarea') textarea: ElementRef;
     @ViewChild('mdArea') mdArea: ElementRef;
 
     constructor(private blogService: AdminBlogService, private router: Router, private activatedRoute: ActivatedRoute) {}
-    get tags() {
+    get selectedTags() {
         return this.form.get('tags') as FormArray;
     }
     get contents(): string {
@@ -29,25 +31,9 @@ export class AdminBlogEditComponent implements OnInit, AfterViewInit {
         this.activatedRoute.params.subscribe((param) => {
             this.init(param.id);
         });
-    }
 
-    ngAfterViewInit() {
-        let cnt = 0;
-        const setHeight = () => {
-            const el = this.mdArea.nativeElement as HTMLDivElement;
-            el.style.height = window.innerHeight - el.offsetTop + 'px';
-        };
-        const check = () => {
-            if (this.mdArea) {
-                setHeight();
-                window.onresize = (event) => setHeight();
-            } else {
-                if (++cnt < 20) {
-                    setTimeout(() => check(), 50);
-                }
-            }
-        };
-        //        check();
+        this.tags = this.blogService.getTags();
+        console.log(this.tags);
     }
 
     init(id?: string) {
@@ -70,13 +56,22 @@ export class AdminBlogEditComponent implements OnInit, AfterViewInit {
     }
 
     onClickAddTag(input: HTMLInputElement) {
-        this.tags.push(new FormControl(input.value));
+        this.addTag(input, input.value);
+    }
 
-        input.value = null;
+    onSelectTag(input: HTMLInputElement, tag: MatAutocompleteSelectedEvent) {
+        this.addTag(input, tag.option.value);
+    }
+
+    private addTag(elInput: HTMLInputElement, tag: string) {
+        if (tag?.trim()) {
+            this.selectedTags.push(new FormControl(tag));
+            elInput.value = null;
+        }
     }
 
     onClickRemoveTag(index: number) {
-        this.tags.removeAt(index);
+        this.selectedTags.removeAt(index);
     }
 
     async onSelectImage(event: Event) {

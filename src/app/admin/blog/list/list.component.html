@@ -1,0 +1,27 @@
+<div class="page" style="display: flex">
+    <div>
+        <div class="btn-area">
+            <button mat-raised-button color="primary" (click)="onClickAdd()">Add</button>
+        </div>
+        <ul>
+            <li *ngFor="let blog of blogs; let i = index">
+                <a routerLink="/admin/blog/list" [queryParams]="{ id: blog.id }">{{ blog.title }}</a>
+            </li>
+        </ul>
+    </div>
+    <div *ngIf="selected" style="width: 100%; padding: 0 20px">
+        <div class="btn-area">
+            <button mat-raised-button color="primary" (click)="onClickEdit()">Edit</button>
+        </div>
+        <div>
+            <div style="border-bottom: 1px solid black">
+                <h1>{{ selected.title }}</h1>
+                <div>
+                    <span style="margin-right: 20px">{{ selected.created_at | date: 'yyyy/MM/dd hh:mm' }}</span>
+                    <span *ngFor="let tag of selected.tags">{{ tag }}</span>
+                </div>
+            </div>
+            <markdown [data]="contents" ngPreserveWhitespaces></markdown>
+        </div>
+    </div>
+</div>

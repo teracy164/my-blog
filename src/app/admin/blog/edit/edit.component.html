@@ -11,7 +11,11 @@
         <mat-form-field class="tags">
             <mat-label>Tags</mat-label>
             <mat-chip-list #chipList>
-                <mat-chip *ngFor="let tag of tags.controls; let i = index" [selectable]="true" [removable]="true" (removed)="onClickRemoveTag(i)"
+                <mat-chip
+                    *ngFor="let tag of selectedTags.controls; let i = index"
+                    [selectable]="true"
+                    [removable]="true"
+                    (removed)="onClickRemoveTag(i)"
                     >{{ tag.value }}
                     <mat-icon matChipRemove>cancel</mat-icon>
                 </mat-chip>
@@ -19,10 +23,16 @@
             <input
                 #tag
                 placeholder="input tag name. when push enter key, add tag."
+                [matAutocomplete]="auto"
                 [matChipInputFor]="chipList"
                 [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
                 (matChipInputTokenEnd)="onClickAddTag(tag)"
             />
+            <mat-autocomplete #auto="matAutocomplete" (optionSelected)="onSelectTag(tag, $event)">
+                <mat-option *ngFor="let tag of tags" [value]="tag">
+                    {{ tag }}
+                </mat-option>
+            </mat-autocomplete>
         </mat-form-field>
     </div>
     <div class="editor-ctrl">
