@@ -37,5 +37,13 @@
                 }
             }
         }
+
+        &.qualifications {
+            display: flex;
+            justify-content: center;
+            .wrapper {
+                text-align: left;
+            }
+        }
     }
 }
