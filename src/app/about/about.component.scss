@@ -38,6 +38,12 @@
             }
         }
 
+        &.skills {
+            display: flex;
+            justify-content: center;
+            text-align: left;
+        }
+
         &.qualifications {
             display: flex;
             justify-content: center;

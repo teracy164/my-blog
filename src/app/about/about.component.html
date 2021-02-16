@@ -93,18 +93,22 @@
         </mat-tab>
         <mat-tab label="スキル">
             <div class="tab-item skills">
-                <div style="display: flex">
-                    <div style="flex-basis: 150px">カテゴリ</div>
-                    <div style="flex-basis: auto">熟練度</div>
-                    <div style="flex-basis: 200px">スキル</div>
-                    <div>備考</div>
-                </div>
-                <div *ngFor="let skill of skills" style="display: flex">
-                    <div style="flex-basis: 150px">{{ skill.category }}</div>
-                    <div style="flex-basis: auto">{{ skill.level }}</div>
-                    <div style="flex-basis: 200px">{{ skill.name }}</div>
-                    <div>{{ skill.note }}</div>
-                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>カテゴリ</th>
+                            <th>熟練度</th>
+                            <th>スキル</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let skill of skills">
+                            <td>{{ skill.category }}</td>
+                            <td>{{ skill.level }}</td>
+                            <td>{{ skill.name }}</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </mat-tab>
         <mat-tab label="資格">
