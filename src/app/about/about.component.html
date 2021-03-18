@@ -29,7 +29,9 @@
                                         <p *ngIf="project.language">言語/FW：{{ project.language }}</p>
                                         <p *ngIf="project.db">DB：{{ project.db }}</p>
                                         <p *ngIf="project.infra">インフラ：{{ project.infra }}</p>
-                                        <pre *ngIf="project.note">{{ project.note }}</pre>
+                                        <ng-container *ngIf="project.notes">
+                                            <p *ngFor="let note of project.notes">{{ note }}</p>
+                                        </ng-container>
                                     </div>
                                 </div>
                             </td>
@@ -39,6 +41,7 @@
             </div>
         </mat-tab>
         <mat-tab label="スキル">
+            ◎：得意、○：まぁまぁできる、△：触ったことはある／昔にやったから今は微妙かも、☆：趣味で触ってみた
             <div class="tab-item skills">
                 <table>
                     <thead>
