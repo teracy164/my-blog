@@ -1,6 +1,12 @@
 .about-page {
     text-align: center;
 
+    .icon {
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+    }
+
     .sns-links {
         display: flex;
         justify-content: center;
@@ -32,8 +38,25 @@
             table {
                 margin: auto;
                 td {
+                    vertical-align: top;
                     text-align: left;
                     padding: 5px 10px;
+
+                    .project {
+                        margin-bottom: 10px;
+
+                        h4, p {
+                            margin: 0;
+                        }
+                        .description {
+                            padding-left: 20px;
+
+                            pre {
+                                margin: 0;
+                                font: inherit;
+                            }
+                        }
+                    }
                 }
             }
         }
