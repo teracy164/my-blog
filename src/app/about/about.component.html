@@ -25,14 +25,26 @@
                             <td>
                                 <div class="project" *ngFor="let project of career.projects">
                                     <h4 class="name">{{ project.name }}</h4>
-                                    <div class="description">
-                                        <p *ngIf="project.language">言語/FW：{{ project.language }}</p>
-                                        <p *ngIf="project.db">DB：{{ project.db }}</p>
-                                        <p *ngIf="project.infra">インフラ：{{ project.infra }}</p>
-                                        <ng-container *ngIf="project.notes">
-                                            <p *ngFor="let note of project.notes">{{ note }}</p>
-                                        </ng-container>
-                                    </div>
+                                    <table class="description">
+                                        <tr *ngIf="project.language">
+                                            <th>言語／FW</th>
+                                            <td>{{ project.language }}</td>
+                                        </tr>
+                                        <tr *ngIf="project.db">
+                                            <th>DB</th>
+                                            <td>{{ project.db }}</td>
+                                        </tr>
+                                        <tr *ngIf="project.infra">
+                                            <th>インフラ</th>
+                                            <td>{{ project.infra }}</td>
+                                        </tr>
+                                        <tr *ngIf="project.notes">
+                                            <th>備考</th>
+                                            <td>
+                                                <p *ngFor="let note of project.notes">{{ note }}</p>
+                                            </td>
+                                        </tr>
+                                    </table>
                                 </div>
                             </td>
                         </tr>

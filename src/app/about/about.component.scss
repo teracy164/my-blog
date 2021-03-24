@@ -49,11 +49,23 @@
                             margin: 0;
                         }
                         .description {
-                            padding-left: 20px;
+                            margin-left: 10px;
+                            width: 100%;
+                            border-collapse: collapse;
+                            border: 1px solid lightgray;
 
-                            pre {
-                                margin: 0;
-                                font: inherit;
+                            tr {
+                                border-bottom: 1px solid lightgray;
+
+                                th {
+                                    padding: 5px;
+                                    width: 120px;
+                                    background-color: rgb(240, 240, 255);
+                                    border-right: 1px solid lightgray;
+                                }
+                                td {
+                                    padding: 5px;
+                                }
                             }
                         }
                     }
