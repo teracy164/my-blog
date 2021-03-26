@@ -38,6 +38,12 @@ export class CareersComponent {
                     infra: 'Heroku => AWS ElasticBeansTalk',
                 },
                 {
+                    name: '自社勤怠システム構築（プロトタイプ）',
+                    language: 'Angular+Bootstrap＋Express.js＋OpenAPI',
+                    db: 'Postgres11',
+                    infra: 'Heroku',
+                },
+                {
                     name: '社内DevOps環境構築及び運用',
                     notes: ['ドキュメント：Confluence', 'タスク／コード管理：GitLab', '※EC2上に構築'],
                 },
