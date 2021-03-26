@@ -1,0 +1,39 @@
+.career {
+    max-width: 95%;
+
+    .period {
+        h3 {
+            margin: 0;
+        }
+    }
+
+    .project {
+        text-align: left;
+        margin-bottom: 10px;
+        max-width: 600px;
+
+        h4, p {
+            margin: 0;
+        }
+        .description {
+            margin-left: 10px;
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid lightgray;
+
+            tr {
+                border-bottom: 1px solid lightgray;
+
+                th {
+                    padding: 5px;
+                    width: 120px;
+                    background-color: rgb(240, 240, 255);
+                    border-right: 1px solid lightgray;
+                }
+                td {
+                    padding: 5px;
+                }
+            }
+        }
+    }
+}

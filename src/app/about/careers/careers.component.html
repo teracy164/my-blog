@@ -1,0 +1,32 @@
+<div class="tab-item career" fxLayout="row wrap" fxLayoutAlign="center">
+    <ng-container *ngFor="let career of careers">
+        <div fxFlex="40" fxFlex.lt-md="30" fxFlex.lt-sm="100" class="period">
+            <h3>{{ career.period }}</h3>
+        </div>
+        <div fxFlex="60" fxFlex.lt-md="70" fxFlex.lt-sm="100">
+            <div class="project" *ngFor="let project of career.projects">
+                <h4 class="name">{{ project.name }}</h4>
+                <table class="description">
+                    <tr *ngIf="project.language">
+                        <th>言語／FW</th>
+                        <td>{{ project.language }}</td>
+                    </tr>
+                    <tr *ngIf="project.db">
+                        <th>DB</th>
+                        <td>{{ project.db }}</td>
+                    </tr>
+                    <tr *ngIf="project.infra">
+                        <th>インフラ</th>
+                        <td>{{ project.infra }}</td>
+                    </tr>
+                    <tr *ngIf="project.notes">
+                        <th>備考</th>
+                        <td>
+                            <p *ngFor="let note of project.notes">{{ note }}</p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </ng-container>
+</div>

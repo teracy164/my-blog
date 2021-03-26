@@ -15,75 +15,15 @@
     </div>
     ※連絡を取りたい場合はTwitterのDMにてお願いします※
 
-    <mat-tab-group>
+    <mat-tab-group mat-align-tabs="center">
         <mat-tab label="経歴">
-            <div class="tab-item career">
-                <table>
-                    <tbody>
-                        <tr *ngFor="let career of careers">
-                            <td>{{ career.period }}</td>
-                            <td>
-                                <div class="project" *ngFor="let project of career.projects">
-                                    <h4 class="name">{{ project.name }}</h4>
-                                    <table class="description">
-                                        <tr *ngIf="project.language">
-                                            <th>言語／FW</th>
-                                            <td>{{ project.language }}</td>
-                                        </tr>
-                                        <tr *ngIf="project.db">
-                                            <th>DB</th>
-                                            <td>{{ project.db }}</td>
-                                        </tr>
-                                        <tr *ngIf="project.infra">
-                                            <th>インフラ</th>
-                                            <td>{{ project.infra }}</td>
-                                        </tr>
-                                        <tr *ngIf="project.notes">
-                                            <th>備考</th>
-                                            <td>
-                                                <p *ngFor="let note of project.notes">{{ note }}</p>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+            <app-careers class="tab-item"></app-careers>
         </mat-tab>
         <mat-tab label="スキル">
-            ◎：得意、○：まぁまぁできる、△：触ったことはある／昔にやったから今は微妙かも、☆：趣味で触ってみた
-            <div class="tab-item skills">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>カテゴリ</th>
-                            <th>熟練度</th>
-                            <th>スキル</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr *ngFor="let skill of skills">
-                            <td>{{ skill.category }}</td>
-                            <td>{{ skill.level }}</td>
-                            <td>{{ skill.name }}</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+            <app-skills class="tab-item"></app-skills>
         </mat-tab>
         <mat-tab label="資格">
-            <div class="tab-item qualifications">
-                <div class="wrapper">
-                    <ul>
-                        <li>基本情報技術者試験</li>
-                        <li>応用情報技術者試験</li>
-                        <li>Androidアプリケーション技術者認定試験ベーシック</li>
-                        <li>サーティファイC言語プログラミング能力認定試験1級</li>
-                    </ul>
-                </div>
-            </div>
+            <app-qualifications class="tab-item"></app-qualifications>
         </mat-tab>
     </mat-tab-group>
 </div>

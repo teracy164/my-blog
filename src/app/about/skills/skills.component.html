@@ -1,0 +1,19 @@
+◎：得意、○：まぁまぁできる、△：触ったことはある／昔にやったから今は微妙かも、☆：趣味で触ってみた
+<div class="tab-item skills">
+    <table>
+        <thead>
+            <tr>
+                <th>カテゴリ</th>
+                <th>熟練度</th>
+                <th>スキル</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let skill of skills">
+                <td>{{ skill.category }}</td>
+                <td>{{ skill.level }}</td>
+                <td>{{ skill.name }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
