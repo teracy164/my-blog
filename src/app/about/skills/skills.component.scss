@@ -1,5 +1,45 @@
 .skills {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     text-align: left;
+
+    .field {
+        position: relative;
+        border: 1px solid lightgray;
+        padding: 20px;
+        width: 600px;
+        max-width: 95%;
+        margin-bottom: 20px;
+
+        .title {
+            position: absolute;
+            top: -0.5em;
+            left: 10px;
+            padding: 0 10px;
+            background-color: white;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    }
+
+    .chip {
+        display: inline-block;
+        padding: 3px 10px;
+        margin: 5px;
+        border-radius: 20px;
+        background-color: rgb(200,200,200);
+        box-shadow: 1px 1px 3px;
+
+        &.language {
+            background-color: rgb(255,200,200);
+        }
+        &.framework {
+            background-color: rgb(200,255,200);
+        }
+        &.ui-component {
+            background-color: rgb(200,255,255);
+        }
+    }
+
 }

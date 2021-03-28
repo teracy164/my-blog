@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
     selector: 'app-careers',
     templateUrl: './careers.component.html',
-    styleUrls: ['./careers.component.scss'],
+    styleUrls: ['./careers.component.scss', '../shared/styles.scss'],
 })
 export class CareersComponent {
     public readonly careers = [
