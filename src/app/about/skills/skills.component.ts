@@ -66,7 +66,7 @@ export class SkillsComponent {
         return [
             { name: '得意', skills: filter(LEVELS.GOOD) },
             { name: 'そこそこ得意', skills: filter(LEVELS.NORMAL) },
-            { name: '業務経験あり', skills: filter(LEVELS.HAVE_EXPERIENCE) },
+            { name: '得意とまでは言えない（業務経験あり）', skills: filter(LEVELS.HAVE_EXPERIENCE) },
             { name: '趣味で触った', skills: filter(LEVELS.HOBBY) },
         ];
     }
