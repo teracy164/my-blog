@@ -70,16 +70,4 @@ export class SkillsComponent {
             { name: '趣味で触った', skills: filter(LEVELS.HOBBY) },
         ];
     }
-    get goodSkills() {
-        return this.skills.filter((item) => item.level === LEVELS.GOOD);
-    }
-    get normalSkills() {
-        return this.skills.filter((item) => item.level === LEVELS.NORMAL);
-    }
-    get haveExperienceSkills() {
-        return this.skills.filter((item) => item.level === LEVELS.HAVE_EXPERIENCE);
-    }
-    get hobbySkills() {
-        return this.skills.filter((item) => item.level === LEVELS.HOBBY);
-    }
 }
