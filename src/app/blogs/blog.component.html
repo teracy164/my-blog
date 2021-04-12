@@ -1,11 +1,8 @@
 <div class="blog-list" fxLayout="row" fxLayout.lt-md="column">
     <div fxHide [fxHide.lt-md]="false" class="mobile-menu" [class.show]="isShowMobileList">
-        <div class="menu-btn-wrapper">
-            <span class="title" *ngIf="isShowMobileList">history</span>
-            <button (click)="isShowMobileList = !isShowMobileList" class="menu-btn">
-                {{ isShowMobileList ? '<<' : 'history >>' }}
-            </button>
-        </div>
+        <button mat-fab color="accent" (click)="isShowMobileList = !isShowMobileList" class="menu-btn">
+            <mat-icon>history</mat-icon>
+        </button>
         <div class="mobile-history" (click)="isShowMobileList = false">
             <ng-container *ngTemplateOutlet="list"></ng-container>
         </div>

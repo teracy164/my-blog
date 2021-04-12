@@ -8,9 +8,10 @@ import { BlogsDetailComponent } from './detail/detail.component';
 import { MarkdownModule } from 'ngx-markdown';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 @NgModule({
     declarations: [BlogsComponent, BlogsDetailComponent],
-    imports: [CommonModule, BlogsRoutingModule, MarkdownModule.forRoot(), FlexLayoutModule, MatIconModule],
+    imports: [CommonModule, BlogsRoutingModule, MarkdownModule.forRoot(), FlexLayoutModule, MatIconModule, MatButtonModule],
     providers: [BlogsService],
 })
 export class BlogsModule {}

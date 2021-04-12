@@ -2,7 +2,6 @@
 
 $list-width: 300px;
 .blog-list {
-    text-align: center;
     height: calc(100% - #{$header-height});
 
     .list {
@@ -11,6 +10,7 @@ $list-width: 300px;
         border-right: 1px solid lightgray;
         overflow-y: auto;
         background-color: white;
+        transition: all 1000ms 0s ease;
 
         ul {
             padding: 0;
@@ -42,36 +42,36 @@ $list-width: 300px;
 }
 
 .mobile-menu {
-    text-align: left;
+    transition: all 300ms 0s ease;
     .menu-btn-wrapper {
-        max-width: $list-width;
         background-color: white;
+        width: 200px;
         display: flex;
-
-        .title {
-            flex-basis: 100%;
-            text-align: center;
-        }
-        .menu-btn {
-            flex-basis: auto;
-            border: 0;
-            background-color: white;
-        }
+        transition: all 300ms 0s ease;
+    }
+    .menu-btn {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        margin: 10px;
     }
     .mobile-history {
-        display: none;
         position: absolute;
         height: calc(100% - #{$header-height});
-        width: 100vw;
+        width: 0;
+        transition: all 300ms 0s ease;
     }
     &.show {
-        background-color: rgba(0, 0, 0, 0.5);
         .mobile-history {
-            display: block;
+            width: 100vw;
             background-color: rgba(0, 0, 0, 0.5);
         }
         .menu-btn-wrapper {
-            text-align: right;
+            width: $list-width;
+            max-width: $list-width;
+            .title {
+                flex-basis: 100%;
+            }
         }
     }
 }
