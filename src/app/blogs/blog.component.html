@@ -17,6 +17,7 @@
 
 <ng-template #list>
     <div class="list" (click)="onClickList($event)">
+        <h3 style="padding: 3px">history</h3>
         <ul *ngIf="blogs">
             <li *ngFor="let blog of blogs; let i = index">
                 <p class="create-date">{{ blog.created_at | date: 'yyyy/MM/dd' }}</p>
