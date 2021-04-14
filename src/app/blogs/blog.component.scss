@@ -60,16 +60,18 @@ $list-width: 300px;
         position: absolute;
         width: 0;
         height: 0;
-        top: 100%;
-        left: 100%;
+        top: calc(100% - 25px);
+        left: calc(100% - 25px);
+        opacity: 0;
         transition: all 500ms 0s ease;
     }
     &.show {
         .mobile-history {
-            width: 100vw;
+            width: 100%;
             height: calc(100% - #{$header-height});
             top: $header-height;
             left: 0;
+            opacity: 1;
         }
         .menu-btn-wrapper {
             max-width: $list-width;
