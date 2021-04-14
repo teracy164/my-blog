@@ -51,6 +51,7 @@ $list-width: 300px;
         right: 0;
         margin: 10px;
         z-index: 1001;
+        transition: all 100ms 0s ease;
     }
     .menu-btn:active {
         margin: 8px;
