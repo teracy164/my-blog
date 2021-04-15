@@ -2,6 +2,18 @@
     display: flex;
     justify-content: center;
     .wrapper {
+        max-width: 800px;
         text-align: left;
+
+        .mobile {
+            &.date {
+                font-size: 14px;
+                color: lightgray;
+            }
+
+            &.name {
+                margin-bottom: 20px;
+            }
+        }
     }
 }
