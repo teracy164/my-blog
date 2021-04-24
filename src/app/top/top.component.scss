@@ -9,9 +9,38 @@ img {
 .blog-title {
     max-height: 50vh;
     overflow-y: hidden;
+    position: relative;
     h1 {
         position: absolute;
         color: white;
+    }
+
+    .about {
+        background-color: white;
+        position: absolute;
+        bottom: 5px;
+        right: 5px;
+        height: 25px;
+        display: flex;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        border-radius: 3px;
+        box-shadow: 1px 1px 5px;
+
+        .text {
+            margin-right: 10px;
+        }
+        img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+    }
+    .about:hover {
+        background-color: rgb(230, 230, 230);
+        border: 1px solid blue;
     }
 }
 
