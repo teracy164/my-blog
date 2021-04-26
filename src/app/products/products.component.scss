@@ -1,8 +1,17 @@
 .page {
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.title {
+    width: 600px;
+    max-width: 100vw;
 }
 .product {
     padding: 10px;
+    width: 600px;
+    max-width: 95vw;
 
     mat-card {
         background-color: rgb(230, 230, 255);
