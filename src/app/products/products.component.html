@@ -1,11 +1,17 @@
-<h1>Products</h1>
-<ul>
-    <li>
-        <a href="https://teracy55.github.io/password-manager/" target="_brank">パスワードマネージャー</a>
-        <p>シンプルなパスワードマネージャーです(β版)</p>
-    </li>
-    <li>
-        <a href="https://github.com/teracy55/img-downloader" target="_brank">Image Downloader</a>
-        <p>指定のWebページ内の画像を一括ダウンロードするためのツールです</p>
-    </li>
-</ul>
+<div class="page">
+    <h1>Products</h1>
+    <div style="display: flex; flex-direction: column; align-items: center">
+        <div *ngFor="let product of products" class="product">
+            <mat-card style="width: 600px; max-width: 95%">
+                <mat-card-header>
+                    <mat-card-title>
+                        <a [href]="product.url" target="_brank">{{ product.name }}</a>
+                    </mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                    {{ product.description }}
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+</div>
