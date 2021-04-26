@@ -5,11 +5,14 @@
             <mat-card style="width: 600px; max-width: 95%">
                 <mat-card-header>
                     <mat-card-title>
-                        <a [href]="product.url" target="_brank">{{ product.name }}</a>
+                        <a *ngIf="product.url; else noneURL" [href]="product.url" target="_brank">{{ product.name }}</a>
+                        <ng-template #noneURL>
+                            {{ product.name }}
+                        </ng-template>
                     </mat-card-title>
                 </mat-card-header>
                 <mat-card-content>
-                    {{ product.description }}
+                    <p>{{ product.description }}</p>
                 </mat-card-content>
             </mat-card>
         </div>

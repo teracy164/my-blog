@@ -7,9 +7,13 @@ import { Component } from '@angular/core';
 export class ProductsComponent {
     readonly products = [
         {
+            name: '本サイト',
+            description: `本サイトはAngularにてスクラッチ開発しています。バックエンドにはFirebaseを使用しています`,
+        },
+        {
             name: 'パスワードマネージャー',
             url: 'https://teracy55.github.io/password-manager/',
-            description: 'Google Drive上でパスワード情報を管理するシンプルなパスワードマネージャーです',
+            description: 'Google Drive上でパスワード情報を管理するシンプルなパスワードマネージャーです。' + 'Angular ＋ GoogleAPIで作成。',
         },
         {
             name: 'Image Downloader',
