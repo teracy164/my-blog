@@ -43,7 +43,7 @@
             <input #inputFile type="file" (change)="onSelectImage($event)" />
         </div>
     </div>
-    <div #mdArea class="edit-area">
+    <div #mdArea class="edit-area" [style]="areaStyle">
         <div class="area editor">
             <textarea #textarea formControlName="contents" placeholder="input area. support markdown" (keydown)="onKeydown($event)"></textarea>
         </div>

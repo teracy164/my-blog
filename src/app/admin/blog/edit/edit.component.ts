@@ -27,13 +27,21 @@ export class AdminBlogEditComponent implements OnInit {
         return this.form.get('contents').value || '';
     }
 
+    get areaStyle() {
+        if (this.mdArea) {
+            const el = this.mdArea.nativeElement as HTMLInputElement;
+            const height = window.innerHeight - el.getBoundingClientRect().top;
+            return `height: ${height}px`;
+        }
+        return '';
+    }
+
     ngOnInit() {
         this.activatedRoute.params.subscribe((param) => {
             this.init(param.id);
         });
 
         this.tags = this.blogService.getTags();
-        console.log(this.tags);
     }
 
     init(id?: string) {
