@@ -13,15 +13,6 @@
         <div class="btn-area">
             <button mat-raised-button color="primary" (click)="onClickEdit()">Edit</button>
         </div>
-        <div>
-            <div style="border-bottom: 1px solid black">
-                <h1>{{ selected.title }}</h1>
-                <div>
-                    <span style="margin-right: 20px">{{ selected.created_at | date: 'yyyy/MM/dd hh:mm' }}</span>
-                    <span *ngFor="let tag of selected.tags">{{ tag }}</span>
-                </div>
-            </div>
-            <markdown [data]="contents" ngPreserveWhitespaces></markdown>
-        </div>
+        <app-blogs-detail [blog]="selected"></app-blogs-detail>
     </div>
 </div>

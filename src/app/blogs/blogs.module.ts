@@ -3,15 +3,15 @@ import { CommonModule } from '@angular/common';
 import { BlogsRoutingModule } from './blogs-routing.module';
 import { BlogsService } from './blogs.service';
 import { BlogsComponent } from './blog.component';
-import { BlogsDetailComponent } from './detail/detail.component';
+import { BlogsDetailModule } from './detail/detail.module';
 
-import { MarkdownModule } from 'ngx-markdown';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+
 @NgModule({
-    declarations: [BlogsComponent, BlogsDetailComponent],
-    imports: [CommonModule, BlogsRoutingModule, MarkdownModule.forRoot(), FlexLayoutModule, MatIconModule, MatButtonModule],
+    declarations: [BlogsComponent],
+    imports: [CommonModule, BlogsRoutingModule, BlogsDetailModule, FlexLayoutModule, MatIconModule, MatButtonModule],
     providers: [BlogsService],
 })
 export class BlogsModule {}

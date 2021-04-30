@@ -88,6 +88,24 @@ export class AdminBlogEditComponent implements OnInit {
         this.form.get('contents').setValue(newContents);
     }
 
+    onKeydown(event: KeyboardEvent) {
+        if (event.key.toLowerCase() === 'enter') {
+            const el = this.textarea.nativeElement as HTMLTextAreaElement;
+
+            // 改行が反映された後に値を更新する
+            setTimeout(() => {
+                // 半角スペース２つを挿入（挿入位置は改行前）
+                const position = el.selectionStart - 1;
+                const newContents = this.contents.slice(0, position) + '  ' + this.contents.slice(position);
+                this.form.get('contents').setValue(newContents);
+
+                // 半角スペース＋改行分だけカーソル位置をずらす
+                el.selectionStart = position + 3;
+                el.selectionEnd = position + 3;
+            });
+        }
+    }
+
     onClickCancel() {
         this.back2List();
     }
