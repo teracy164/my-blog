@@ -16,7 +16,10 @@ body {
 /* マークダウンプレビュー */
 .md-preview {
     img {
-        max-width: 300px;
-        max-height: 300px;
+        width: 600px;
+        max-width: 100%;
+        height: 600px;
+        max-height: 100%;
+        object-fit: contain;
     }
 }
