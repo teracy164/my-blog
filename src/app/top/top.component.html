@@ -1,20 +1,23 @@
-<div class="blog-title">
-    <h1>てらしーの部屋</h1>
-    <img class="bg" [src]="imgUrl" />
-    <div class="about" routerLink="/about">
-        <p class="text">てらしー とは</p>
-        <img src="/assets/img/my-icon.jpeg" />
-    </div>
-</div>
-<div fxLayout="row" fxLayout.lt-sm="column">
-    <div class="contents news" fxFlex="70">
-        <app-top-news></app-top-news>
-
-        <div class="qiita">
-            <app-top-qiita></app-top-qiita>
+<div *ngIf="!isInitializing" class="panel" [class.loading]="isLoading">
+    <div class="blog-title">
+        <h1>てらしーの部屋</h1>
+        <img class="bg" [src]="imgUrl" (load)="onLoadedImage()" />
+        <div class="about" routerLink="/about">
+            <p class="text">てらしー とは</p>
+            <img src="/assets/img/my-icon.jpeg" />
         </div>
     </div>
-    <div class="contents twitter" fxFlex>
-        <app-top-twitter></app-top-twitter>
+    <div fxLayout="row" fxLayout.lt-sm="column">
+        <div class="contents news" fxFlex="70">
+            <app-top-news></app-top-news>
+
+            <div class="qiita">
+                <app-top-qiita></app-top-qiita>
+            </div>
+        </div>
+        <div class="contents twitter" fxFlex>
+            <app-top-twitter></app-top-twitter>
+        </div>
     </div>
 </div>
+<div *ngIf="isLoading" class="loading-message">loading...</div>
