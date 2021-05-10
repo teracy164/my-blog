@@ -45,7 +45,7 @@
     </div>
     <div #mdArea class="edit-area" [style]="areaStyle">
         <div class="area editor">
-            <textarea #textarea formControlName="contents" placeholder="input area. support markdown" (keydown)="onKeydown($event)"></textarea>
+            <textarea #textarea formControlName="contents" placeholder="input area. support markdown" (input)="onInput($event)"></textarea>
         </div>
         <div class="area preview md-preview">
             <markdown [data]="contents" ngPreserveWhitespaces *ngIf="contents; else noInput"> </markdown>

@@ -1,6 +1,6 @@
 import { FormArray, FormControl, FormGroup } from '@angular/forms';
 import { AdminBlogService } from '../shared/blog.service';
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, ChangeDetectorRef, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Blog } from 'src/types';
 import { COMMA, ENTER } from '@angular/cdk/keycodes';
@@ -11,29 +11,29 @@ import { MatAutocompleteSelectedEvent } from '@angular/material/autocomplete';
     templateUrl: './edit.component.html',
     styleUrls: ['./edit.component.scss'],
 })
-export class AdminBlogEditComponent implements OnInit {
+export class AdminBlogEditComponent implements OnInit, AfterViewInit {
     id: string;
     form: FormGroup;
     tags: string[] = [];
+    areaStyle = '';
     readonly separatorKeysCodes: number[] = [ENTER, COMMA];
     @ViewChild('textarea') textarea: ElementRef;
     @ViewChild('mdArea') mdArea: ElementRef;
 
-    constructor(private blogService: AdminBlogService, private router: Router, private activatedRoute: ActivatedRoute) {}
+    constructor(
+        private blogService: AdminBlogService,
+        private router: Router,
+        private activatedRoute: ActivatedRoute,
+        private cdRef: ChangeDetectorRef,
+    ) {
+        window.addEventListener('resize', () => this.setAreaStyle());
+    }
+
     get selectedTags() {
         return this.form.get('tags') as FormArray;
     }
     get contents(): string {
         return this.form.get('contents').value || '';
-    }
-
-    get areaStyle() {
-        if (this.mdArea) {
-            const el = this.mdArea.nativeElement as HTMLInputElement;
-            const height = window.innerHeight - el.getBoundingClientRect().top;
-            return `height: ${height}px`;
-        }
-        return '';
     }
 
     ngOnInit() {
@@ -42,6 +42,20 @@ export class AdminBlogEditComponent implements OnInit {
         });
 
         this.tags = this.blogService.getTags();
+    }
+
+    ngAfterViewInit() {
+        this.setAreaStyle();
+    }
+
+    private setAreaStyle() {
+        if (this.mdArea) {
+            const el = this.mdArea.nativeElement as HTMLInputElement;
+            const height = window.innerHeight - el.getBoundingClientRect().top;
+            this.areaStyle = `height: ${height}px`;
+
+            this.cdRef.detectChanges();
+        }
     }
 
     init(id?: string) {
@@ -96,20 +110,24 @@ export class AdminBlogEditComponent implements OnInit {
         this.form.get('contents').setValue(newContents);
     }
 
-    onKeydown(event: KeyboardEvent) {
-        if (event.key.toLowerCase() === 'enter') {
+    onInput(event: InputEvent) {
+        if (event.inputType === 'insertLineBreak') {
             const el = this.textarea.nativeElement as HTMLTextAreaElement;
 
             // 改行が反映された後に値を更新する
             setTimeout(() => {
                 // 半角スペース２つを挿入（挿入位置は改行前）
                 const position = el.selectionStart - 1;
-                const newContents = this.contents.slice(0, position) + '  ' + this.contents.slice(position);
-                this.form.get('contents').setValue(newContents);
+                const breakWords = '  ';
+                const before = this.contents.slice(0, position);
+                if (!before.endsWith(breakWords)) {
+                    const newContents = before + breakWords + this.contents.slice(position);
+                    this.form.get('contents').setValue(newContents);
 
-                // 半角スペース＋改行分だけカーソル位置をずらす
-                el.selectionStart = position + 3;
-                el.selectionEnd = position + 3;
+                    // 半角スペース＋改行分だけカーソル位置をずらす
+                    el.selectionStart = position + 3;
+                    el.selectionEnd = position + 3;
+                }
             });
         }
     }
