@@ -11,7 +11,7 @@ export class CareersComponent {
             period: '2021年02月〜',
             projects: [
                 {
-                    name: 'Web勤怠システム',
+                    name: '業界特化型Web勤怠システム',
                     language: 'Vue.js+Vuetify+Laravel8',
                     db: 'MySQL５.7',
                 },
@@ -21,7 +21,7 @@ export class CareersComponent {
             period: '2019年09月〜',
             projects: [
                 {
-                    name: '計測結果参照Webシステム開発',
+                    name: '非破壊検査システム開発',
                     language: 'Vue.js+ElementUI+python',
                     db: 'DynamoDB',
                     infra: 'AWS API Gateway/Lambda/S3/Cognito',

@@ -23,6 +23,11 @@ export class ProductsComponent {
         },
         {
             name: 'Image Downloader',
+            url: 'https://teracy-img-downloader.herokuapp.com/',
+            description: '指定のWebページ内の画像を一括ダウンロードするためWebツールです。',
+        },
+        {
+            name: 'Image Downloader（コマンドラインツール）',
             url: 'https://github.com/teracy55/img-downloader',
             description: '指定のWebページ内の画像を一括ダウンロードするためのコマンドラインツールです',
         },
