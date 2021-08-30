@@ -8,6 +8,26 @@ import { Component } from '@angular/core';
 export class CareersComponent {
     public readonly careers = [
         {
+            period: '2021年08月〜',
+            projects: [
+                {
+                    name: 'スーパー向けPOP画像共有システム',
+                    language: 'Nuxt.js+ElementUI+NestJS+OpenAPI',
+                    db: 'MySQL５.6',
+                    notes: ['開発環境には「WSL2 + Docker for Windows」を採用'],
+                },
+            ],
+        },
+        {
+            period: '2021年05月〜',
+            projects: [
+                {
+                    name: '非破壊検査システム脆弱性試験',
+                    notes: ['AppScanを使用した脆弱性試験を実施', 'AWS API GatewayやCloud Flontにて対策を実装'],
+                },
+            ],
+        },
+        {
             period: '2021年02月〜',
             projects: [
                 {

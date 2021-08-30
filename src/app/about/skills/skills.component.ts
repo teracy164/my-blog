@@ -23,7 +23,7 @@ export class SkillsComponent {
         { category: 'framework', name: 'Angular', level: LEVELS.GOOD },
         { category: 'framework', name: 'Vue.js', level: LEVELS.GOOD },
         { category: 'framework', name: 'NestJS', level: LEVELS.GOOD },
-        { category: 'framework', name: 'Nuxt.js', level: LEVELS.HOBBY },
+        { category: 'framework', name: 'Nuxt.js', level: LEVELS.GOOD },
         { category: 'framework', name: 'Laravel', level: LEVELS.GOOD },
         { category: 'framework', name: 'ZendFW', level: LEVELS.HAVE_EXPERIENCE },
         { category: 'framework', name: 'Flutter', level: LEVELS.HOBBY },
