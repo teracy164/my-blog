@@ -32,7 +32,7 @@ export class ProductsComponent {
             description: '指定のWebページ内の画像を一括ダウンロードするためのコマンドラインツールです',
         },
         {
-            name: 'システム開発サポートツール（開発中）',
+            name: 'システム開発サポートツール　KAIASTooo　※開発中',
             url: 'https://kaisatooo.herokuapp.com/',
             description:
                 'システム開発全般（見積もり／設計／テスト／手順書等ドキュメント）の管理を行うためのシステムです。<br>※HEROKUの無料プランで動かしているため、サーバースリープ時は表示に1分ほど時間がかかることがあります',

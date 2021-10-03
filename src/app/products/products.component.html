@@ -4,7 +4,7 @@
         <mat-card>
             <mat-card-header>
                 <mat-card-title>
-                    <a *ngIf="product.url; else noneURL" [href]="product.url" target="_brank">{{ product.name }}</a>
+                    <a *ngIf="product.url; else noneURL" [href]="product.url" target="_blank">{{ product.name }}</a>
                     <ng-template #noneURL>
                         {{ product.name }}
                     </ng-template>
