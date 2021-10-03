@@ -24,7 +24,9 @@ export class ProductsComponent {
         {
             name: 'Image Downloader',
             url: 'https://teracy-img-downloader.herokuapp.com/',
-            description: '指定のWebページ内の画像を一括ダウンロードするためWebツールです。',
+            description:
+                '指定のWebページ内の画像を一括ダウンロードするためWebツールです。<br>' +
+                '※HEROKUの無料プランで動かしているため、サーバースリープ時は表示に1分ほど時間がかかることがあります',
         },
         {
             name: 'Image Downloader（コマンドラインツール）',
@@ -35,7 +37,8 @@ export class ProductsComponent {
             name: 'システム開発サポートツール　KAIASTooo　※開発中',
             url: 'https://kaisatooo.herokuapp.com/',
             description:
-                'システム開発全般（見積もり／設計／テスト／手順書等ドキュメント）の管理を行うためのシステムです。<br>※HEROKUの無料プランで動かしているため、サーバースリープ時は表示に1分ほど時間がかかることがあります',
+                'システム開発全般（見積もり／設計／テスト／手順書等ドキュメント）の管理を行うためのシステムです。<br>' +
+                '※HEROKUの無料プランで動かしているため、サーバースリープ時は表示に1分ほど時間がかかることがあります',
         },
     ];
 }
