@@ -17,7 +17,7 @@ export class ProductsComponent {
                 '<a target="_blank" href="https://qiita.com/teracy164/items/bc35bb21f98d3d493f9f">https://qiita.com/teracy164/items/bc35bb21f98d3d493f9f</a>',
         },
         {
-            name: 'パスワードマネージャー',
+            name: 'パスワードマネージャー　※開発中',
             url: 'https://teracy164.github.io/password-manager/',
             description: 'Google Drive上でパスワード情報を管理するシンプルなパスワードマネージャーです。<br>' + 'Angular ＋ GoogleAPIで作成。',
         },
