@@ -1,6 +1,6 @@
 <div *ngIf="!isInitializing" class="panel" [class.loading]="isLoading">
     <div class="blog-title">
-        <h1>てらしーの部屋</h1>
+        <h1 style="text-shadow: 2px 2px 3px lightgray">てらしーの部屋</h1>
         <img class="bg" [src]="imgUrl" (load)="onLoadedImage()" />
         <div class="about" routerLink="/about">
             <p class="text">てらしー とは</p>
