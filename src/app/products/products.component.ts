@@ -18,7 +18,7 @@ export class ProductsComponent {
         },
         {
             name: 'パスワードマネージャー　※開発中',
-            url: 'https://teracy164.github.io/password-manager/',
+            url: 'https://pass-mg.teracy164.com/',
             description: 'Google Drive上でパスワード情報を管理するシンプルなパスワードマネージャーです。<br>' + 'Angular ＋ GoogleAPIで作成。',
         },
         {
