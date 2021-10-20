@@ -5,7 +5,7 @@ import { QiitaItem } from 'src/types/qiita.interface';
 @Injectable()
 export class QiitaService {
     private readonly apiHost = 'https://qiita.com/api/v2';
-    private readonly myUserName = 'teracy55';
+    private readonly myUserName = 'teracy164';
 
     constructor(private http: HttpClient) {}
 

@@ -14,11 +14,11 @@ export class ProductsComponent {
                 'バックエンドにはFirebaseを使用しています<br>' +
                 '<br>' +
                 'なお、本サイトの構築についてはQiitaで解説しています<br>' +
-                '<a target="_blank" href="https://qiita.com/teracy55/items/bc35bb21f98d3d493f9f">https://qiita.com/teracy55/items/bc35bb21f98d3d493f9f</a>',
+                '<a target="_blank" href="https://qiita.com/teracy164/items/bc35bb21f98d3d493f9f">https://qiita.com/teracy164/items/bc35bb21f98d3d493f9f</a>',
         },
         {
             name: 'パスワードマネージャー',
-            url: 'https://teracy55.github.io/password-manager/',
+            url: 'https://teracy164.github.io/password-manager/',
             description: 'Google Drive上でパスワード情報を管理するシンプルなパスワードマネージャーです。<br>' + 'Angular ＋ GoogleAPIで作成。',
         },
         {
@@ -30,7 +30,7 @@ export class ProductsComponent {
         },
         {
             name: 'Image Downloader（コマンドラインツール）',
-            url: 'https://github.com/teracy55/img-downloader',
+            url: 'https://github.com/teracy164/img-downloader',
             description: '指定のWebページ内の画像を一括ダウンロードするためのコマンドラインツールです',
         },
         {
