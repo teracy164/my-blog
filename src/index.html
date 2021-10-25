@@ -19,6 +19,13 @@
         <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         <meta name="google-site-verification" content="_sNNGMpldy6jC2C9zAjN8kTkoOMEwwbBL0ZjQJ8Feis" />
         <meta name="google-site-verification" content="rTEK9WrFpMTjpom5TCMxTrJBhTcouKV0u1b3oQ7Psm0" />
+        <script>
+            (function() {
+                if (['teracy-blog.web.app', 'teracy-blog.firebaseapp.com'].includes(location.hostname)) {
+                    location.href = `https://www.teracy164.com${location.pathname}`
+                }
+            })()
+            </script>
     </head>
     <body>
         <app-root></app-root>
