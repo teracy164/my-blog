@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://teracy-blog.web.app/</loc>
+        <loc>https://www.teracy164.com/</loc>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://teracy-blog.web.app/products/</loc>
+        <loc>https://www.teracy164.com/products/</loc>
         <priority>0.5</priority>
     </url>
     <url>
-        <loc>https://teracy-blog.web.app/about/</loc>
+        <loc>https://www.teracy164.com/about/</loc>
         <priority>0.5</priority>
     </url>
 </urlset>
