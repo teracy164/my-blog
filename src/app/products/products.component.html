@@ -1,18 +1,13 @@
-<div class="page">
-    <h1 class="title">Products</h1>
-    <div *ngFor="let product of products" class="product">
-        <mat-card>
-            <mat-card-header>
-                <mat-card-title>
-                    <a *ngIf="product.url; else noneURL" [href]="product.url" target="_blank">{{ product.name }}</a>
-                    <ng-template #noneURL>
-                        {{ product.name }}
-                    </ng-template>
-                </mat-card-title>
-            </mat-card-header>
-            <mat-card-content>
-                <div [innerHTML]="product.description"></div>
-            </mat-card-content>
-        </mat-card>
+<div class="products">
+    <div *ngFor="let product of products; let i = index" class="product" [class.align-right]="i % 2 === 1">
+        
+            <div class="wrapper">
+                <h1>
+                    <a *ngIf="product.url; else noneURL;" [href]="product.url" target="_blank"> {{ product.name }}</a>
+                    <ng-template #noneURL>{{ product.name }}</ng-template>
+                </h1>
+                <div [innerHTML]="product.description" class="description"></div>
+            </div>
+        
     </div>
 </div>

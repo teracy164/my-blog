@@ -1,20 +1,33 @@
-.page {
-    padding: 20px;
+.products {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-.title {
-    width: 600px;
-    max-width: 100%;
-}
-.product {
-    padding: 10px;
-    width: 600px;
-    max-width: 95vw;
+    background-color: #aaaaff;
 
-    mat-card {
-        background-color: rgb(240, 240, 255);
+    .product {
+        width: 100%;
+        text-align: left;
+
+        .wrapper {
+            padding: 30px;
+
+            h1 {
+                margin-top: 0;
+            }
+
+            .description {
+                word-break: break-all;
+            }
+        }
+        &.align-right {
+            padding-top: 40px;
+            padding-bottom: 40px;
+            transform: translateY(-30px);
+            text-align: right;
+            background-color: #f5f5ff;
+            clip-path: polygon(0 80px, 100% 0, 100% 100%, 0 100%);
+            box-shadow: 3px 3px 5px lightgray;
+        }
     }
 }
 p {
