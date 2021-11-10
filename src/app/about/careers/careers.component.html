@@ -1,32 +1,48 @@
-<div class="tab-item career" fxLayout="row wrap" fxLayoutAlign="center">
-    <ng-container *ngFor="let career of careers">
-        <div fxFlex="40" fxFlex.lt-md="30" fxFlex.lt-sm="100" class="period">
-            <h3>{{ career.period }}</h3>
+<div class="tab-item careers" fxLayout="row wrap" fxLayoutAlign="center">
+    <div *ngFor="let career of careers" class="career">
+        <div class="career-name">{{ career.name }}</div>
+        <div class="project-wrapper">
+        <div class="project" *ngFor="let project of career.projects">
+            <table class="detail">
+                <tr>
+                    <th colspan="2" class="project-name">{{ project.name }}</th>
+                </tr>
+                <tr *ngIf="project.period">
+                    <th>期間</th>
+                    <td>{{ project.period.start | date: 'yyyy/MM' }}～{{ project.period.end | date: 'yyyy/MM' }}</td>
+                </tr>
+                <tr *ngIf="project.description">
+                    <th>概要</th>
+                    <td>{{ project.description }}</td>
+                </tr>
+                <tr *ngIf="project.processes?.length">
+                    <th>工程</th>
+                    <td>{{ project.processes.join(', ') }}</td>
+                </tr>
+                <tr *ngIf="project.position">
+                    <th>役割</th>
+                    <td>{{ project.position }}</td>
+                </tr>
+                <tr *ngIf="project.language">
+                    <th>言語／FW</th>
+                    <td>{{ project.language }}</td>
+                </tr>
+                <tr *ngIf="project.db">
+                    <th>DB</th>
+                    <td>{{ project.db }}</td>
+                </tr>
+                <tr *ngIf="project.infra">
+                    <th>インフラ</th>
+                    <td>{{ project.infra }}</td>
+                </tr>
+                <tr *ngIf="project.notes">
+                    <th>備考</th>
+                    <td>
+                        <p *ngFor="let note of project.notes">{{ note }}</p>
+                    </td>
+                </tr>
+            </table>
         </div>
-        <div fxFlex="60" fxFlex.lt-md="70" fxFlex.lt-sm="100">
-            <div class="project" *ngFor="let project of career.projects">
-                <h4 class="name">{{ project.name }}</h4>
-                <table class="description">
-                    <tr *ngIf="project.language">
-                        <th>言語／FW</th>
-                        <td>{{ project.language }}</td>
-                    </tr>
-                    <tr *ngIf="project.db">
-                        <th>DB</th>
-                        <td>{{ project.db }}</td>
-                    </tr>
-                    <tr *ngIf="project.infra">
-                        <th>インフラ</th>
-                        <td>{{ project.infra }}</td>
-                    </tr>
-                    <tr *ngIf="project.notes">
-                        <th>備考</th>
-                        <td>
-                            <p *ngFor="let note of project.notes">{{ note }}</p>
-                        </td>
-                    </tr>
-                </table>
-            </div>
         </div>
-    </ng-container>
+    </div>
 </div>

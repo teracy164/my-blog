@@ -1,4 +1,4 @@
-.career {
+.careers {
     max-width: 95%;
 
     .period {
@@ -7,31 +7,68 @@
         }
     }
 
+    .career {
+        width: 800px;
+
+        .career-name {
+            text-align: left;
+            font-weight: bold;
+            position: relative;
+            padding-left: 30px;
+            display: flex;
+            align-items: center;
+        }
+        .career-name::before {
+            background-color: #aaaaff;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            content: ' ';
+            position: absolute;
+            left: 0;
+        }
+
+        .project-wrapper {
+            margin-left: 10px;
+            padding: 10px;
+            border-left: 1px solid lightgray;
+        }
+    }
+
     .project {
         text-align: left;
         margin-bottom: 10px;
-        max-width: 600px;
+        max-width: 100%;
 
-        h4, p {
+        h4,
+        p {
             margin: 0;
         }
-        .description {
-            margin-left: 10px;
-            width: 100%;
-            border-collapse: collapse;
-            border: 1px solid lightgray;
+        table {
+            &.detail {
+                margin-left: 10px;
+                width: 100%;
+                border-collapse: collapse;
+                border: 1px solid lightgray;
 
-            tr {
-                border-bottom: 1px solid lightgray;
+                font-size: 0.7em;
+                tr {
+                    border-bottom: 1px solid lightgray;
 
-                th {
-                    padding: 5px;
-                    width: 120px;
-                    background-color: rgb(240, 240, 255);
-                    border-right: 1px solid lightgray;
-                }
-                td {
-                    padding: 5px;
+                    th {
+                        padding: 5px;
+                        width: 120px;
+                        background-color: rgb(245, 245, 255);
+                        border-right: 1px solid lightgray;
+                        font-weight: unset;
+
+                        &.project-name {
+                            font-weight: bold;
+                        }
+                    }
+                    td {
+                        padding: 5px;
+                    }
                 }
             }
         }
