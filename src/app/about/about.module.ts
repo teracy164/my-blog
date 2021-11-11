@@ -5,6 +5,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { CareersModule } from './careers/careers.module';
 import { SkillsModule } from './skills/skills.module';
 import { QualificationsModule } from './qualifications/qualifications.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
     declarations: [AboutComponent],
