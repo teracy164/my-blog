@@ -17,9 +17,10 @@ export class ProductsComponent {
                 '<a target="_blank" href="https://qiita.com/teracy164/items/bc35bb21f98d3d493f9f">https://qiita.com/teracy164/items/bc35bb21f98d3d493f9f</a>',
         },
         {
-            name: 'パスワードマネージャー　※開発中',
+            name: 'パスワードマネージャー',
             url: 'https://pass-mg.teracy164.com/',
-            description: 'Google Drive上でパスワード情報を管理するシンプルなパスワードマネージャーです。<br>' + 'Angular ＋ GoogleAPIで作成。',
+            description:
+                '※開発中<br>Google Drive上でパスワード情報を管理するシンプルなパスワードマネージャーです。<br>' + 'Angular ＋ GoogleAPIで作成。',
         },
         {
             name: 'Image Downloader',
@@ -34,10 +35,10 @@ export class ProductsComponent {
             description: '指定のWebページ内の画像を一括ダウンロードするためのコマンドラインツールです',
         },
         {
-            name: 'システム開発サポートツール　KAIASTooo　※開発中',
+            name: 'KAIASTooo - システム開発サポートツール',
             url: 'https://kaisatooo.herokuapp.com/',
             description:
-                'システム開発全般（見積もり／設計／テスト／手順書等ドキュメント）の管理を行うためのシステムです。<br>' +
+                '※開発中<BR>システム開発全般（見積もり／設計／テスト／手順書等ドキュメント）の管理を行うためのシステムです。<br>' +
                 '※HEROKUの無料プランで動かしているため、サーバースリープ時は表示に1分ほど時間がかかることがあります',
         },
     ];
