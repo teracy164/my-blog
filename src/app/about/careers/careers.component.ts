@@ -11,6 +11,17 @@ export class CareersComponent {
             name: 'G社（新規事業企画開発グループ）',
             projects: [
                 {
+                    name: '非破壊検査システム機能改修',
+                    description: '',
+                    period: {
+                        start: '2021/10/01',
+                        end: '',
+                    },
+                    processes: ['保守開発', '性能改善検討'],
+                    position: 'メンバー',
+                    notes: ['不具合改修', '一部機能の高速化方式検討'],
+                },
+                {
                     name: 'スーパー向けPOP画像共有システム',
                     description: 'あるスーパーの各店舗でPOP画像を容易に共有するためのWebシステム',
                     period: {
