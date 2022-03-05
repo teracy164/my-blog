@@ -1,6 +1,6 @@
 import { FormArray, FormControl, FormGroup } from '@angular/forms';
 import { AdminBlogService } from '../shared/blog.service';
-import { AfterViewInit, ChangeDetectorRef, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import {  Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Blog } from 'src/types';
 import { COMMA, ENTER } from '@angular/cdk/keycodes';
@@ -11,11 +11,10 @@ import { MatAutocompleteSelectedEvent } from '@angular/material/autocomplete';
     templateUrl: './edit.component.html',
     styleUrls: ['./edit.component.scss'],
 })
-export class AdminBlogEditComponent implements OnInit, AfterViewInit {
+export class AdminBlogEditComponent implements OnInit {
     id: string;
     form: FormGroup;
     tags: string[] = [];
-    areaStyle = '';
     readonly separatorKeysCodes: number[] = [ENTER, COMMA];
     @ViewChild('textarea') textarea: ElementRef;
     @ViewChild('mdArea') mdArea: ElementRef;
@@ -24,9 +23,7 @@ export class AdminBlogEditComponent implements OnInit, AfterViewInit {
         private blogService: AdminBlogService,
         private router: Router,
         private activatedRoute: ActivatedRoute,
-        private cdRef: ChangeDetectorRef,
     ) {
-        window.addEventListener('resize', () => this.setAreaStyle());
     }
 
     get selectedTags() {
@@ -42,20 +39,6 @@ export class AdminBlogEditComponent implements OnInit, AfterViewInit {
         });
 
         this.tags = this.blogService.getTags();
-    }
-
-    ngAfterViewInit() {
-        this.setAreaStyle();
-    }
-
-    private setAreaStyle() {
-        if (this.mdArea) {
-            const el = this.mdArea.nativeElement as HTMLInputElement;
-            const height = window.innerHeight - el.getBoundingClientRect().top;
-            this.areaStyle = `height: ${height}px`;
-
-            this.cdRef.detectChanges();
-        }
     }
 
     init(id?: string) {

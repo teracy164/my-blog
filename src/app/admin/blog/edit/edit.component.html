@@ -1,9 +1,5 @@
-<div [formGroup]="form" class="page" style="overflow-y: hidden">
+<div [formGroup]="form" class="page" style="overflow-y: hidden; display: flex; flex-direction: column;">
     <div style="padding: 10px">
-        <div class="btn-area">
-            <button mat-raised-button (click)="onClickCancel()">cancel</button>
-            <button mat-raised-button color="primary" (click)="onClickSave()">submit</button>
-        </div>
         <mat-form-field class="example-full-width" class="title">
             <mat-label>Blog Title</mat-label>
             <input matInput formControlName="title" />
@@ -42,8 +38,12 @@
             </button>
             <input #inputFile type="file" (change)="onSelectImage($event)" />
         </div>
+        <div class="btn-area">
+            <button mat-raised-button (click)="onClickCancel()">cancel</button>
+            <button mat-raised-button color="primary" (click)="onClickSave()">submit</button>
+        </div>
     </div>
-    <div #mdArea class="edit-area" [style]="areaStyle">
+    <div #mdArea class="edit-area" style="max-height: 100%; overflow-y: auto">
         <div class="area editor">
             <textarea #textarea formControlName="contents" placeholder="input area. support markdown" (input)="onInput($event)"></textarea>
         </div>
