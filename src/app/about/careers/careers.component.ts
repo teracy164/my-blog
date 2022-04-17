@@ -19,7 +19,13 @@ export class CareersComponent {
                     },
                     processes: ['保守開発', '性能改善検討'],
                     position: 'メンバー',
-                    notes: ['不具合改修', '一部機能の高速化方式検討'],
+                    language: 'フロント：Vue.js＋ElementUI、バックエンド：AWS API Gateway + Lambda(python)',
+                    db: 'DynamoDB',
+                    notes: [
+                        '・不具合改修',
+                        '・Lambdaの性能改善検討（multiprosessingによる並列化、メモリごとの性能評価 等）',
+                        '・DynamoDB + AWS Backup + CloudWatch + Lambdaでの定期的なデータコピー方式',
+                    ],
                 },
                 {
                     name: 'スーパー向けPOP画像共有システム',
