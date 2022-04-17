@@ -1,5 +1,9 @@
 .careers {
-    max-width: 95%;
+    justify-content: center;
+
+    .career-wrapper {
+        max-width: 800px;
+    }
 
     .period {
         h3 {
