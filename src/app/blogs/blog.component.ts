@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BlogsService } from './blogs.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Blog } from 'src/types';
 
 @Component({
@@ -16,13 +16,23 @@ export class BlogsComponent implements OnInit {
         return this.blogsService.blogs;
     }
 
-    constructor(private blogsService: BlogsService, private activatedRoute: ActivatedRoute) {}
+    getBlogPageUrl(blog: Blog) {
+        return `/blogs/${blog.id}`;
+    }
+
+    constructor(private blogsService: BlogsService, private activatedRoute: ActivatedRoute, private router: Router) {}
 
     async ngOnInit() {
         await this.blogsService.init();
 
-        this.activatedRoute.queryParams.subscribe((param) => {
-            this.selectedBlog = this.blogsService.findBlog(param.id) || this.blogs[0];
+        this.activatedRoute.params.subscribe((param) => {
+            const blog = this.blogsService.findBlog(param.id) || this.blogs[0];
+            if (param.id) {
+                this.selectedBlog = blog;
+            } else {
+                // ルートアクセス時は最新のブログを表示
+                this.router.navigate([this.getBlogPageUrl(blog)]);
+            }
         });
     }
 

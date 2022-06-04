@@ -1,6 +1,7 @@
 <div class="blog-list" fxLayout="row" fxLayout.lt-md="column">
     <div fxHide [fxHide.lt-md]="false" class="mobile-menu" [class.show]="isShowMobileList">
-        <button mat-fab color="{{ isShowMobileList ? '' : 'accent' }}" (click)="isShowMobileList = !isShowMobileList" class="menu-btn">
+        <button mat-fab color="{{ isShowMobileList ? '' : 'accent' }}" (click)="isShowMobileList = !isShowMobileList"
+            class="menu-btn">
             <mat-icon>
                 {{ isShowMobileList ? 'close' : 'history' }}
             </mat-icon>
@@ -23,7 +24,7 @@
         <ul *ngIf="blogs">
             <li *ngFor="let blog of blogs; let i = index">
                 <p class="create-date">{{ blog.created_at | date: 'yyyy/MM/dd' }}</p>
-                <a class="blog-title" routerLink="/blogs" [queryParams]="{ id: blog.id }" (click)="onClickBlog(i)">{{ blog.title }}</a>
+                <a class="blog-title" [routerLink]="getBlogPageUrl(blog)" (click)="onClickBlog(i)">{{ blog.title }}</a>
             </li>
         </ul>
     </div>
