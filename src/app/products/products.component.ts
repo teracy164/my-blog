@@ -54,5 +54,21 @@ export class ProductsComponent {
                 'Nuxt3で作成しています<br>' +
                 '※HEROKUの無料プランで動かしているため、サーバースリープ時は表示に1分ほど時間がかかることがあります',
         },
+        {
+            name: 'ナンプレ（新人研修用課題）',
+            url: 'https://number-place-js.herokuapp.com/',
+            description:
+                '新人研修担当時に、課題のサンプルとして作成したナンプレ<br>' +
+                'express.jsで作成しています<br>' +
+                '※HEROKUの無料プランで動かしているため、サーバースリープ時は表示に1分ほど時間がかかることがあります',
+        },
+        {
+            name: 'ナンプレ自動解答（新人研修用課題）',
+            url: 'https://number-place-auto-resolver.herokuapp.com/',
+            description:
+                '新人研修担当時に、課題のサンプルとして作成したナンプレの自動解答プログラム<br>' +
+                'express.jsで作成しています<br>' +
+                '※HEROKUの無料プランで動かしているため、サーバースリープ時は表示に1分ほど時間がかかることがあります',
+        },
     ];
 }
