@@ -17,12 +17,6 @@ export class ProductsComponent {
                 '<a target="_blank" href="https://qiita.com/teracy164/items/bc35bb21f98d3d493f9f">https://qiita.com/teracy164/items/bc35bb21f98d3d493f9f</a>',
         },
         {
-            name: 'パスワードマネージャー',
-            url: 'https://pass-mg.teracy164.com/',
-            description:
-                '※開発中<br>Google Drive上でパスワード情報を管理するシンプルなパスワードマネージャーです。<br>' + 'Angular ＋ GoogleAPIで作成。',
-        },
-        {
             name: 'Image Downloader',
             url: 'https://teracy-img-downloader.herokuapp.com/',
             description:
@@ -35,6 +29,18 @@ export class ProductsComponent {
             url: 'https://github.com/teracy164/img-downloader',
             description: '指定のWebページ内の画像を一括ダウンロードするためのコマンドラインツールです',
         },
+        {
+            name: 'Genshin Tools',
+            url: 'https://genshin.teracy164.com/',
+            description: '原神向けのツールです<br>' + 'Nuxt3で作成しています',
+        },
+        {
+            name: 'パスワードマネージャー',
+            url: 'https://pass-mg.teracy164.com/',
+            description:
+                '※開発中<br>Google Drive上でパスワード情報を管理するシンプルなパスワードマネージャーです。<br>' + 'Angular ＋ GoogleAPIで作成。',
+        },
+
         {
             name: 'KAIASTooo - システム開発サポートツール',
             url: 'https://kaisatooo.herokuapp.com/',
