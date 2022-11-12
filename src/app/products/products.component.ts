@@ -18,11 +18,11 @@ export class ProductsComponent {
         },
         {
             name: 'Image Downloader',
-            url: 'https://teracy-img-downloader.herokuapp.com/',
+            url: 'https://img-downloader.onrender.com/',
             description:
                 '指定のWebページ内の画像を一括ダウンロードするためWebツールです。<br>' +
                 'Nuxt.js + ElementUIで作成しています<br>' +
-                '※HEROKUの無料プランで動かしているため、サーバースリープ時は表示に1分ほど時間がかかることがあります',
+                '※Renderの無料プランで動かしているため、サーバースリープ時は表示に1分ほど時間がかかることがあります',
         },
         {
             name: 'Image Downloader（コマンドラインツール）',
@@ -42,39 +42,22 @@ export class ProductsComponent {
         },
 
         {
-            name: 'KAIASTooo - システム開発サポートツール',
-            url: 'https://kaisatooo.herokuapp.com/',
+            name: 'Sysool - システム開発サポートツール',
+            url: 'https://sysool.fly.dev/',
             description:
                 '※開発中<BR>' +
                 'システム開発全般（見積もり／設計／テスト／手順書等ドキュメント）の管理を行うためのシステムです。<br>' +
-                'Nuxt.js + ElementUIで作成しています<br>' +
-                '※HEROKUの無料プランで動かしているため、サーバースリープ時は表示に1分ほど時間がかかることがあります',
+                'Nuxt.js(ver2) + ElementUIで作成しています',
         },
         {
-            name: 'ShaFuku - 社内副業システム',
-            url: 'https://shafuku.herokuapp.com/',
+            name: 'Shafuku - 社内副業システム',
+            url: 'https://shafuku.onrender.com/',
             description:
                 '※開発中<BR>' +
                 '社内の雑事を社内副業として依頼／管理するシステムです。<br>' +
                 '社内副業とすることで、社員は小遣い稼ぎができ、会社としては積極的な姿勢を見ることができます。<br>' +
                 'Nuxt3で作成しています<br>' +
-                '※HEROKUの無料プランで動かしているため、サーバースリープ時は表示に1分ほど時間がかかることがあります',
-        },
-        {
-            name: 'ナンプレ（新人研修用課題）',
-            url: 'https://number-place-js.herokuapp.com/',
-            description:
-                '新人研修担当時に、課題のサンプルとして作成したナンプレ<br>' +
-                'express.jsで作成しています<br>' +
-                '※HEROKUの無料プランで動かしているため、サーバースリープ時は表示に1分ほど時間がかかることがあります',
-        },
-        {
-            name: 'ナンプレ自動解答（新人研修用課題）',
-            url: 'https://number-place-auto-resolver.herokuapp.com/',
-            description:
-                '新人研修担当時に、課題のサンプルとして作成したナンプレの自動解答プログラム<br>' +
-                'express.jsで作成しています<br>' +
-                '※HEROKUの無料プランで動かしているため、サーバースリープ時は表示に1分ほど時間がかかることがあります',
+                '※Renderの無料プランで動かしているため、サーバースリープ時は表示に1分ほど時間がかかることがあります',
         },
     ];
 }
