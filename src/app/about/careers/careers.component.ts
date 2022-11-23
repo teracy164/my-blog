@@ -11,11 +11,28 @@ export class CareersComponent {
             name: 'G社（新規事業企画開発グループ）',
             projects: [
                 {
+                    name: 'HRシステム（自社開発）',
+                    description: '',
+                    period: {
+                        start: '2022/10/01',
+                        end: '',
+                    },
+                    processes: ['要件定義', 'アーキテクチャ設計', '基本設計', '開発'],
+                    position: 'リーダー',
+                    language: 'フロント：Nuxt3+ElementPlus+Tailwind、バックエンド：NestJS',
+                    db: 'MySQL8',
+                    notes: [
+                        '・AWSアーキテクチャ構築（ECS + Fargate + RDS）',
+                        '・ローカル環境はdocker-composeで構築',
+                        '・フロント⇔バックエンド間はOpenAPIに準じたRestAPI。openapi-generatorでAPIクライアント自動生成',
+                    ],
+                },
+                {
                     name: '非破壊検査システム機能改修',
                     description: '',
                     period: {
                         start: '2021/10/01',
-                        end: '',
+                        end: '2022/09/31',
                     },
                     processes: ['保守開発', '性能改善検討'],
                     position: 'メンバー',
@@ -81,7 +98,7 @@ export class CareersComponent {
                     description: '自社勤怠システムの開発。外部への販売も開始',
                     period: {
                         start: '2019/07/01',
-                        end: '',
+                        end: '2022/09/31',
                     },
                     processes: ['要件定義', '設計', '開発', '本番環境構築'],
                     position: 'リーダー',
