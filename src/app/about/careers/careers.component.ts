@@ -11,11 +11,42 @@ export class CareersComponent {
             name: 'G社（新規事業企画開発グループ）',
             projects: [
                 {
+                    name: '統合システム開発（自社開発）',
+                    description: 'HRシステムと勤怠システム統合後の保守・機能拡充',
+                    period: {
+                        start: '2023/10/01',
+                        end: '',
+                    },
+                    processes: ['調査', 'アーキテクチャ設計', '開発', '保守'],
+                    position: 'リーダー',
+                    language: 'フロント：Nuxt3+ElementPlus+Tailwind、バックエンド：NestJS',
+                    db: 'MySQL8',
+                    notes: ['・機能拡充'],
+                },
+                {
+                    name: 'HRシステム・勤怠システム統合（自社開発）',
+                    description: '',
+                    period: {
+                        start: '2023/06/01',
+                        end: '2023/09/31',
+                    },
+                    processes: ['調査', 'アーキテクチャ設計', '開発'],
+                    position: 'リーダー',
+                    language: 'フロント：Nuxt3+ElementPlus+Tailwind、バックエンド：NestJS',
+                    db: 'MySQL8',
+                    notes: [
+                        '・EC2で稼働してた勤怠システムをHRシステムに統合',
+                        '・バックエンドのソースコードを統合。勤怠システム側の認証をHRシステムに統合',
+                        '・人事情報がHRシステムと勤怠システムで2重管理になっていたのを一元化',
+                        '・勤怠システムのデータ（Postgres）をHRシステムのDB（MySQL）に移行',
+                    ],
+                },
+                {
                     name: 'HRシステム（自社開発）',
                     description: '',
                     period: {
                         start: '2022/10/01',
-                        end: '',
+                        end: '2023/05/31',
                     },
                     processes: ['要件定義', 'アーキテクチャ設計', '基本設計', '開発'],
                     position: 'リーダー',
