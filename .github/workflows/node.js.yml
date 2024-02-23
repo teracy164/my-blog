@@ -38,5 +38,5 @@ jobs:
                 args: deploy
               env:
                 GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
-                PROJECT_PATH: ./app
+                PROJECT_PATH: ./dist
                 PROJECT_ID: ${{ secrets.PROJECT_ID }}
