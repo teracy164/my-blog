@@ -32,9 +32,17 @@ jobs:
                   npm install
                   npm run create:sitemap
                   npm run build --if-present
-            - name: deploy to Firebase Hosting
+            # - name: deploy to Firebase Hosting
+            #   uses: w9jds/firebase-action@master
+            #   with:
+            #       args: deploy
+            #   env:
+            #       FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+            - name: Deploy to Firebase
               uses: w9jds/firebase-action@master
               with:
-                  args: deploy
+                args: deploy
               env:
-                  FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+                GCP_SA_KEY: ${{ secrets.GCP_SERVICE_ACCOUNT_KEY }}
+                PROJECT_PATH: ./app
+                PROJECT_ID: ${{ secrets.PROJECT_ID }}
