@@ -9,7 +9,7 @@ export class QualificationsComponent {
     readonly qualifications = [
         {
             date: '2024/07/06',
-            name: 'WS Certified Solutions Architect - Associate(SAA)',
+            name: 'AWS Certified Solutions Architect - Associate(SAA)',
         },
         {
             date: '2018/06/20',
