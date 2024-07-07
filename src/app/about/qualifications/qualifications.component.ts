@@ -8,6 +8,10 @@ import { Component } from '@angular/core';
 export class QualificationsComponent {
     readonly qualifications = [
         {
+            date: '2024/07/06',
+            name: 'WS Certified Solutions Architect - Associate(SAA)',
+        },
+        {
             date: '2018/06/20',
             name: '応用情報技術者試験',
         },
