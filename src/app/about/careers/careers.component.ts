@@ -39,6 +39,7 @@ export class CareersComponent {
                         '・バックエンドのソースコードを統合。勤怠システム側の認証をHRシステムに統合',
                         '・人事情報がHRシステムと勤怠システムで2重管理になっていたのを一元化',
                         '・勤怠システムのデータ（Postgres）をHRシステムのDB（MySQL）に移行',
+                        '・勤怠システムのフロント(Angular)をEC2での配信からCloudFrontに移行',
                     ],
                 },
                 {
