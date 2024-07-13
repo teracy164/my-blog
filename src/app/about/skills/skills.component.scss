@@ -8,7 +8,7 @@
         position: relative;
         border: 1px solid lightgray;
         padding: 20px;
-        width: 600px;
+        width: 800px;
         max-width: 95%;
         margin-bottom: 20px;
 
@@ -28,21 +28,20 @@
         padding: 3px 10px;
         margin: 5px;
         border-radius: 20px;
-        background-color: rgb(200,200,200);
+        background-color: rgb(200, 200, 200);
         box-shadow: 1px 1px 3px;
 
         &.language {
-            background-color: rgb(255,200,200);
+            background-color: rgb(255, 200, 200);
         }
         &.framework {
-            background-color: rgb(200,255,200);
+            background-color: rgb(200, 255, 200);
         }
         &.ui-component {
-            background-color: rgb(200,255,255);
+            background-color: rgb(200, 255, 255);
         }
         &.infra {
-            background-color: rgb(255,255,200)
+            background-color: rgb(255, 255, 200);
         }
     }
-
 }
