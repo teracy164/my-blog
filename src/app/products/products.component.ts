@@ -35,6 +35,11 @@ export class ProductsComponent {
             description: '原神向けのツールです<br>' + 'Nuxt3で作成しています',
         },
         {
+            name: 'ZZZ Tools',
+            url: 'https://zzz.teracy164.com/',
+            description: 'ゼンレスゾーンゼロ（ZZZ）のビルドカード作成ツールです<br>' + 'Nuxt3で作成しています',
+        },
+        {
             name: 'パスワードマネージャー',
             url: 'https://pass-mg.teracy164.com/',
             description:
