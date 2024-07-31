@@ -40,6 +40,11 @@ export class ProductsComponent {
             description: 'ゼンレスゾーンゼロ（ZZZ）のビルドカード作成ツールです<br>' + 'Nuxt3で作成しています',
         },
         {
+            name: 'ZZZ Chrome拡張',
+            url: 'https://github.com/teracy164/chrome-zzz',
+            description: 'ゼンレスゾーンゼロ（ZZZ）の公式戦績ツールにドライバ詳細とスコアを埋め込むChrome拡張です',
+        },
+        {
             name: 'パスワードマネージャー',
             url: 'https://pass-mg.teracy164.com/',
             description:
