@@ -1,13 +1,16 @@
 <div class="products">
     <div *ngFor="let product of products; let i = index" class="product" [class.align-right]="i % 2 === 1">
-        
-            <div class="wrapper">
-                <h1>
-                    <a *ngIf="product.url; else noneURL;" [href]="product.url" target="_blank"> {{ product.name }}</a>
-                    <ng-template #noneURL>{{ product.name }}</ng-template>
-                </h1>
-                <div [innerHTML]="product.description" class="description"></div>
-            </div>
-        
+
+        <div class="wrapper">
+            <h1>
+                <a *ngIf="product.url; else noneURL;" [href]="product.url" target="_blank"> {{ product.name }}</a>
+                <ng-template #noneURL>{{ product.name }}</ng-template>
+            </h1>
+            <div [innerHTML]="product.description" class="description"></div>
+        </div>
+
     </div>
+</div>
+<div style="padding: 1em; border-top: 1px solid lightgray;">
+    <a href="/policy/privacy">プライバシーポリシー</a>
 </div>
