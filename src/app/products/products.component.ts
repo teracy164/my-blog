@@ -41,7 +41,7 @@ export class ProductsComponent {
         },
         {
             name: 'ZZZ Chrome拡張',
-            url: 'https://github.com/teracy164/chrome-zzz',
+            url: 'https://chromewebstore.google.com/detail/zzz-score-calculator/ibbbkbnhocldehlkbemmlgkmdlbckjmn?authuser=0&hl=ja',
             description: 'ゼンレスゾーンゼロ（ZZZ）の公式戦績ツールにドライバ詳細とスコアを埋め込むChrome拡張です',
         },
         {
