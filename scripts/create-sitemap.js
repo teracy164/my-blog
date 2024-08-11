@@ -51,6 +51,9 @@ async function createSiteMapData() {
 }
 
 async function createSiteMapFile() {
+    // 常に新しいデータを取得できるようにローカルキャッシュをクリアしておく
+    await firestore.clearPersistence();
+
     const data = await createSiteMapData();
 
     const fs = require('fs');
