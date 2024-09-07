@@ -37,7 +37,10 @@ export class ProductsComponent {
         {
             name: 'ZZZ Tools',
             url: 'https://zzz.teracy164.com/',
-            description: 'ゼンレスゾーンゼロ（ZZZ）のビルドカード作成ツールです<br>' + 'Nuxt3で作成しています',
+            description:
+                'ゼンレスゾーンゼロ（ZZZ）のビルドカード作成ツールです<br>' +
+                'また、育成計算機やレベルごとの素材リストもあります<br>' +
+                'Nuxt3で作成しています',
         },
         {
             name: 'ZZZ Chrome拡張',
@@ -67,7 +70,7 @@ export class ProductsComponent {
                 '社内の雑事を社内副業として依頼／管理するシステムです。<br>' +
                 '社内副業とすることで、社員は小遣い稼ぎができ、会社としては積極的な姿勢を見ることができます。<br>' +
                 'Nuxt3で作成しています<br>' +
-                '※Renderの無料プランで動かしているため、サーバースリープ時は表示に1分ほど時間がかかることがあります',
+                '※現在停止中です',
         },
     ];
 }
