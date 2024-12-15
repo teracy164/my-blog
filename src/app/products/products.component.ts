@@ -30,22 +30,22 @@ export class ProductsComponent {
             description: '指定のWebページ内の画像を一括ダウンロードするためのコマンドラインツールです',
         },
         {
-            name: 'Genshin Tools',
-            url: 'https://genshin.teracy164.com/',
-            description: '原神向けのツールです<br>' + 'Nuxt3で作成しています',
-        },
-        {
             name: 'ZZZ Tools',
-            url: 'https://zzz.teracy164.com/',
+            url: 'https://zzz.teracy.link/',
             description:
                 'ゼンレスゾーンゼロ（ZZZ）のビルドカード作成ツールです<br>' +
                 'また、育成計算機やレベルごとの素材リストもあります<br>' +
                 'Nuxt3で作成しています',
         },
         {
-            name: 'ZZZ Chrome拡張',
+            name: 'ZZZ Score Calculator',
             url: 'https://chromewebstore.google.com/detail/zzz-score-calculator/ibbbkbnhocldehlkbemmlgkmdlbckjmn?authuser=0&hl=ja',
             description: 'ゼンレスゾーンゼロ（ZZZ）の公式戦績ツールにドライバ詳細とスコアを埋め込むChrome拡張です',
+        },
+        {
+            name: 'Genshin Tools',
+            url: 'https://genshin.teracy164.com/',
+            description: '原神向けのツールです<br>' + 'Nuxt3で作成しています',
         },
         {
             name: 'パスワードマネージャー',
