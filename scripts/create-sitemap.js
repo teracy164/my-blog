@@ -1,5 +1,5 @@
-const firebase = require("firebase");
-const app = require("firebase/app");
+const firebase = require('firebase');
+const app = require('firebase/app');
 
 console.log('create sitemap');
 
@@ -22,28 +22,23 @@ async function createSiteMapData() {
         '<?xml version="1.0" encoding="UTF-8"?>',
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
         '  <url>',
-        '    <loc>https://www.teracy164.com/</loc>',
+        '    <loc>https://room.teracy.link/</loc>',
         '    <priority>1.0</priority>',
         '  </url>',
         '  <url>',
-        '    <loc>https://www.teracy164.com/products</loc>',
+        '    <loc>https://room.teracy.link/products</loc>',
         '    <priority>1.0</priority>',
         '  </url>',
         '  <url>',
-        '    <loc>https://www.teracy164.com/about</loc>',
+        '    <loc>https://room.teracy.link/about</loc>',
         '    <priority>1.0</priority>',
         '  </url>',
     ];
 
-    const querySnapshot = await firestore.collection("blogs").get();
-    querySnapshot.docs.forEach(doc => {
-        console.log(doc.id)
-        data.push(...[
-            '  <url>',
-            `    <loc>https://www.teracy164.com/blogs/${doc.id}</loc>`,
-            '    <priority>0.5</priority>',
-            '  </url>',
-        ]);
+    const querySnapshot = await firestore.collection('blogs').get();
+    querySnapshot.docs.forEach((doc) => {
+        console.log(doc.id);
+        data.push(...['  <url>', `    <loc>https://room.teracy.link/blogs/${doc.id}</loc>`, '    <priority>0.5</priority>', '  </url>']);
     });
 
     data.push('</urlset>');
@@ -59,4 +54,4 @@ async function createSiteMapFile() {
     const fs = require('fs');
     fs.writeFileSync('./src/sitemap.xml', data);
 }
-createSiteMapFile()
+createSiteMapFile();

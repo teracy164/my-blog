@@ -44,15 +44,15 @@ export class ProductsComponent {
         },
         {
             name: 'Genshin Tools',
-            url: 'https://genshin.teracy164.com/',
+            url: 'https://genshin.teracy.link/',
             description: '原神向けのツールです<br>' + 'Nuxt3で作成しています',
         },
-        {
-            name: 'パスワードマネージャー',
-            url: 'https://pass-mg.teracy164.com/',
-            description:
-                '※開発中<br>Google Drive上でパスワード情報を管理するシンプルなパスワードマネージャーです。<br>' + 'Angular ＋ GoogleAPIで作成。',
-        },
+        // {
+        //     name: 'パスワードマネージャー',
+        //     url: 'https://pass-mg.teracy.link/',
+        //     description:
+        //         '※開発中<br>Google Drive上でパスワード情報を管理するシンプルなパスワードマネージャーです。<br>' + 'Angular ＋ GoogleAPIで作成。',
+        // },
 
         {
             name: 'Sysool - システム開発サポートツール',
