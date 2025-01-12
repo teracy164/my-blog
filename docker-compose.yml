@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+    my-blog:
+        image: node:14 # Node.js 14を使用
+        working_dir: /usr/src/app # コンテナ内の作業ディレクトリ
+        volumes:
+            - .:/usr/src/app # ローカルのAngularプロジェクトをコンテナにマウント
+            # - /usr/src/app/node_modules    # node_modulesはボリュームで管理
+        ports:
+            - '4200:4200' # ng serveのデフォルトポートを公開
+        command: npm run start -- --host 0.0.0.0 # 開発用のコマンド（package.jsonにあるng serveを実行）
