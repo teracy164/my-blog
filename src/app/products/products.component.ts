@@ -17,6 +17,24 @@ export class ProductsComponent {
                 '<a target="_blank" href="https://qiita.com/teracy164/items/bc35bb21f98d3d493f9f">https://qiita.com/teracy164/items/bc35bb21f98d3d493f9f</a>',
         },
         {
+            name: 'ZZZ Tools',
+            url: 'https://zzz.teracy.link/',
+            description:
+                'ゼンレスゾーンゼロ（ZZZ）向けサイトです<br>' +
+                '育成計算機やレベルごとの素材リストを公開していたり、ゼンゼロ関連のニュースの発信などを行っています<br>' +
+                'Nuxt3で作成しています',
+        },
+        {
+            name: 'ZZZ Score Calculator',
+            url: 'https://chromewebstore.google.com/detail/zzz-score-calculator/ibbbkbnhocldehlkbemmlgkmdlbckjmn?authuser=0&hl=ja',
+            description: 'ゼンレスゾーンゼロ（ZZZ）の公式戦績ツールにドライバ詳細とスコアを埋め込むChrome拡張です',
+        },
+        {
+            name: 'テラゲームズ',
+            url: 'https://games.teracy.link/',
+            description: '鳴潮向けの育成計算機やその他ゲームの発信などを行うサイトです<br>' + 'Nuxt3で作成しています',
+        },
+        {
             name: 'Image Downloader',
             url: 'https://img-downloader.onrender.com/',
             description:
@@ -29,24 +47,11 @@ export class ProductsComponent {
             url: 'https://github.com/teracy164/img-downloader',
             description: '指定のWebページ内の画像を一括ダウンロードするためのコマンドラインツールです',
         },
-        {
-            name: 'ZZZ Tools',
-            url: 'https://zzz.teracy.link/',
-            description:
-                'ゼンレスゾーンゼロ（ZZZ）のビルドカード作成ツールです<br>' +
-                'また、育成計算機やレベルごとの素材リストもあります<br>' +
-                'Nuxt3で作成しています',
-        },
-        {
-            name: 'ZZZ Score Calculator',
-            url: 'https://chromewebstore.google.com/detail/zzz-score-calculator/ibbbkbnhocldehlkbemmlgkmdlbckjmn?authuser=0&hl=ja',
-            description: 'ゼンレスゾーンゼロ（ZZZ）の公式戦績ツールにドライバ詳細とスコアを埋め込むChrome拡張です',
-        },
-        {
-            name: 'Genshin Tools',
-            url: 'https://genshin.teracy.link/',
-            description: '原神向けのツールです<br>' + 'Nuxt3で作成しています',
-        },
+        // {
+        //     name: 'Genshin Tools',
+        //     url: 'https://genshin.teracy.link/',
+        //     description: '原神向けのツールです<br>' + 'Nuxt3で作成しています',
+        // },
         // {
         //     name: 'パスワードマネージャー',
         //     url: 'https://pass-mg.teracy.link/',
