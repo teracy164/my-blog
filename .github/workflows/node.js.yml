@@ -19,7 +19,7 @@ jobs:
                 # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
         steps:
-            - uses: actions/cache@v2
+            - uses: actions/cache@v3
               with:
                   path: '**/node_modules'
                   key: ${{ runner.os }}-modules-${{ hashFiles('**/package-lock.json') }}
@@ -35,8 +35,8 @@ jobs:
             - name: Deploy to Firebase
               uses: w9jds/firebase-action@master
               with:
-                args: deploy
+                  args: deploy
               env:
-                GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
-                PROJECT_PATH: ./dist
-                PROJECT_ID: ${{ secrets.PROJECT_ID }}
+                  GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
+                  PROJECT_PATH: ./dist
+                  PROJECT_ID: ${{ secrets.PROJECT_ID }}
