@@ -16,23 +16,23 @@ export class ProductsComponent {
                 'なお、本サイトの構築についてはQiitaで解説しています<br>' +
                 '<a target="_blank" href="https://qiita.com/teracy164/items/bc35bb21f98d3d493f9f">https://qiita.com/teracy164/items/bc35bb21f98d3d493f9f</a>',
         },
+        // {
+        //     name: 'ZZZ Tools',
+        //     url: 'https://zzz.teracy.link/',
+        //     description:
+        //         'ゼンレスゾーンゼロ（ZZZ）向けサイトです<br>' +
+        //         '育成計算機やレベルごとの素材リストを公開していたり、ゼンゼロ関連のニュースの発信などを行っています<br>' +
+        //         'Nuxt3で作成しています',
+        // },
         {
-            name: 'ZZZ Tools',
-            url: 'https://zzz.teracy.link/',
-            description:
-                'ゼンレスゾーンゼロ（ZZZ）向けサイトです<br>' +
-                '育成計算機やレベルごとの素材リストを公開していたり、ゼンゼロ関連のニュースの発信などを行っています<br>' +
-                'Nuxt3で作成しています',
+            name: 'TERA GAMES',
+            url: 'https://games.teracy.link/',
+            description: 'ゼンレスゾーンゼロや鳴潮向けの育成計算機やその他ゲームの発信などを行うサイトです<br>' + 'Nuxt4で作成しています',
         },
         {
             name: 'ZZZ Score Calculator',
             url: 'https://chromewebstore.google.com/detail/zzz-score-calculator/ibbbkbnhocldehlkbemmlgkmdlbckjmn?authuser=0&hl=ja',
             description: 'ゼンレスゾーンゼロ（ZZZ）の公式戦績ツールにドライバ詳細とスコアを埋め込むChrome拡張です',
-        },
-        {
-            name: 'テラゲームズ',
-            url: 'https://games.teracy.link/',
-            description: '鳴潮向けの育成計算機やその他ゲームの発信などを行うサイトです<br>' + 'Nuxt3で作成しています',
         },
         {
             name: 'Image Downloader',
@@ -67,15 +67,15 @@ export class ProductsComponent {
                 'システム開発全般（見積もり／設計／テスト／手順書等ドキュメント）の管理を行うためのシステムです。<br>' +
                 'Nuxt.js(ver2) + ElementUIで作成しています',
         },
-        {
-            name: 'Shafuku - 社内副業システム',
-            url: 'https://shafuku.onrender.com/',
-            description:
-                '※開発中<BR>' +
-                '社内の雑事を社内副業として依頼／管理するシステムです。<br>' +
-                '社内副業とすることで、社員は小遣い稼ぎができ、会社としては積極的な姿勢を見ることができます。<br>' +
-                'Nuxt3で作成しています<br>' +
-                '※現在停止中です',
-        },
+        // {
+        //     name: 'Shafuku - 社内副業システム',
+        //     url: 'https://shafuku.onrender.com/',
+        //     description:
+        //         '※開発中<BR>' +
+        //         '社内の雑事を社内副業として依頼／管理するシステムです。<br>' +
+        //         '社内副業とすることで、社員は小遣い稼ぎができ、会社としては積極的な姿勢を見ることができます。<br>' +
+        //         'Nuxt3で作成しています<br>' +
+        //         '※現在停止中です',
+        // },
     ];
 }
