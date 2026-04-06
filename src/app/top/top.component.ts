@@ -25,7 +25,12 @@ export class TopComponent implements OnInit {
     }
 
     private async loadImage() {
-        this.imgUrl = await this.storage.ref('images/top.jpg').getDownloadURL().toPromise();
+        try {
+            this.imgUrl = await this.storage.ref('images/top.jpg').getDownloadURL().toPromise();
+        } catch (e) {
+            console.error('画像の読み込みに失敗', e);
+            this.isLoading = false;
+        }
     }
 
     onLoadedImage() {
