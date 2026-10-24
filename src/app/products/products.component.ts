@@ -34,14 +34,15 @@ export class ProductsComponent {
             url: 'https://chromewebstore.google.com/detail/zzz-score-calculator/ibbbkbnhocldehlkbemmlgkmdlbckjmn?authuser=0&hl=ja',
             description: 'ゼンレスゾーンゼロ（ZZZ）の公式戦績ツールにドライバ詳細とスコアを埋め込むChrome拡張です',
         },
-        {
-            name: 'Image Downloader',
-            url: 'https://img-downloader.onrender.com/',
-            description:
-                '指定のWebページ内の画像を一括ダウンロードするためWebツールです。<br>' +
-                'Nuxt.js + ElementUIで作成しています<br>' +
-                '※Renderの無料プランで動かしているため、サーバースリープ時は表示に1分ほど時間がかかることがあります',
-        },
+        // 停止済み
+        // {
+        //     name: 'Image Downloader',
+        //     url: 'https://img-downloader.onrender.com/',
+        //     description:
+        //         '指定のWebページ内の画像を一括ダウンロードするためWebツールです。<br>' +
+        //         'Nuxt.js + ElementUIで作成しています<br>' +
+        //         '※Renderの無料プランで動かしているため、サーバースリープ時は表示に1分ほど時間がかかることがあります',
+        // },
         {
             name: 'Image Downloader（コマンドラインツール）',
             url: 'https://github.com/teracy164/img-downloader',
@@ -58,15 +59,15 @@ export class ProductsComponent {
         //     description:
         //         '※開発中<br>Google Drive上でパスワード情報を管理するシンプルなパスワードマネージャーです。<br>' + 'Angular ＋ GoogleAPIで作成。',
         // },
-
-        {
-            name: 'Sysool - システム開発サポートツール',
-            url: 'https://sysool.fly.dev/',
-            description:
-                '※開発中<BR>' +
-                'システム開発全般（見積もり／設計／テスト／手順書等ドキュメント）の管理を行うためのシステムです。<br>' +
-                'Nuxt.js(ver2) + ElementUIで作成しています',
-        },
+        // 停止済み
+        // {
+        //     name: 'Sysool - システム開発サポートツール',
+        //     url: 'https://sysool.fly.dev/',
+        //     description:
+        //         '※開発中<BR>' +
+        //         'システム開発全般（見積もり／設計／テスト／手順書等ドキュメント）の管理を行うためのシステムです。<br>' +
+        //         'Nuxt.js(ver2) + ElementUIで作成しています',
+        // },
         // {
         //     name: 'Shafuku - 社内副業システム',
         //     url: 'https://shafuku.onrender.com/',

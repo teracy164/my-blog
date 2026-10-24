@@ -11,6 +11,18 @@ export class CareersComponent {
             name: 'G社（新規事業企画開発グループ）',
             projects: [
                 {
+                    name: 'Angular⇒ Nuxt移行',
+                    description: 'GitHub Copilotを活用し、Angularで作成されたWebシステムをNuxtに移行。',
+                    period: {
+                        start: '2026/08/01',
+                        end: '2026/09/31',
+                    },
+                    processes: ['開発', 'テスト', '移行'],
+                    position: 'リーダー',
+                    language: 'Angular16＋PrimeNG、Nuxt4＋ElementPlus',
+                    notes: ['SKILL.mdを作成し、10万行近いコードを移行'],
+                },
+                {
                     name: '統合システム開発（自社開発）',
                     description: 'HRシステムと勤怠システム統合後の保守・機能拡充',
                     period: {

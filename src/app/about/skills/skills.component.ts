@@ -14,6 +14,7 @@ enum LEVELS {
 })
 export class SkillsComponent {
     public skills = [
+        { category: 'AI', name: 'GitHub Copilot', level: LEVELS.NORMAL },
         { category: 'language', name: 'typescript', level: LEVELS.GOOD },
         { category: 'language', name: 'javascript', level: LEVELS.GOOD },
         { category: 'language', name: 'Java', level: LEVELS.NORMAL },
@@ -24,7 +25,6 @@ export class SkillsComponent {
         { category: 'framework', name: 'Vue.js', level: LEVELS.GOOD },
         { category: 'framework', name: 'NestJS', level: LEVELS.GOOD },
         { category: 'framework', name: 'Nuxt.js', level: LEVELS.GOOD },
-        { category: 'framework', name: 'Nuxt3', level: LEVELS.GOOD },
         { category: 'framework', name: 'Laravel', level: LEVELS.NORMAL },
         { category: 'framework', name: 'ZendFW', level: LEVELS.HAVE_EXPERIENCE },
         { category: 'framework', name: 'Flutter', level: LEVELS.HOBBY },
